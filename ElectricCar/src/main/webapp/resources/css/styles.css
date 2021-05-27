@@ -2437,6 +2437,10 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.btn-title{
+	padding-bottom: 3%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -10237,7 +10241,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/bmw-car.jpeg");
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10292,6 +10296,10 @@ body {
 }
 .projects-section .featured-text {
   padding: 2rem;
+}
+.header-section {
+  padding-top: 7%;
+  padding-bottom: 2%;
 }
 @media (min-width: 992px) {
   .projects-section .featured-text {
@@ -10370,6 +10378,42 @@ body {
   color: #fff;
 }
 
+.condition-section {
+  padding-top: 0;
+}
+.condition-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid #64a19d;
+}
+.condition-section .card h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+.condition-section .card hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+.condition-section .social {
+  margin-top: 5rem;
+}
+.condition-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.condition-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.condition-section .social a:active {
+  color: #fff;
+}
 .footer {
   padding: 5rem 0;
 }
