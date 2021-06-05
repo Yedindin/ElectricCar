@@ -24,17 +24,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-            	
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Pick Car</a>
+                <a class="navbar-brand js-scroll-trigger" onclick = "location.href='./'"><bold>Pick Car</bold></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./'">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./search'">나만의 전기차</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./recom'">추천 정보</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./app'">추천 어플</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./charger'">내 주변 충전소</a></li>    
                     </ul>
                 </div>
             </div>
@@ -55,19 +56,20 @@
 								  	<tr>	
 										<th scope='col'>카테고리</th>
 				               			<th scope='col'>제목</th>
+				               			<th scope='col'>내용</th>
 				               			<th scope='col'>등록일</th>
 			               			</tr>
 								    <tr>
 								      <td>사용후기</td><td><a href="#about">누구누구의 리뷰</a></td>
-								      <td>2021-06-04</td>
+								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-04</td>
 								    </tr>
 								    <tr>
 								      <td>전문가리뷰</td><td>전문가 누구누구의 리뷰</td>
-								      <td>2021-06-05</td>
+								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-05</td>
 								    </tr>
 								    <tr>
 								      <td>기타</td><td>무슨무슨차에 관련된 기사</td>
-								      <td>2021-06-06</td>
+								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-06</td>
 								    </tr>
 								</table>
 		                	</div>
