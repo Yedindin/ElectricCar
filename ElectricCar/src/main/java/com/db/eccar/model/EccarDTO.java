@@ -1,7 +1,5 @@
 package com.db.eccar.model;
 
-import java.util.Date;
-
 public class EccarDTO {
 	int car_id;
 	int brand_id;

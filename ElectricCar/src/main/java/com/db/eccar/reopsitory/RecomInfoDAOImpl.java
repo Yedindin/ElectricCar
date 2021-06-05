@@ -11,15 +11,16 @@ import org.springframework.stereotype.Repository;
 import com.db.eccar.model.RecomInfoDTO;
 
 @Repository
-public class RecomInfoDAOImpl {
+public class RecomInfoDAOImpl implements RecomInfoDAO{
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 	
+	@Override
 	public List<RecomInfoDTO> readRecomInfo() {
 		List<RecomInfoDTO> recomInfolist = new ArrayList<RecomInfoDTO>();
-		recomInfolist = sqlSession.selectList("test.readRecomInfo");
-		System.out.println(recomInfolist);
+		recomInfolist = sqlSession.selectList("Post.readRecomInfo");
+		//System.out.println(recomInfolist);
 		return recomInfolist;
 	}
 	

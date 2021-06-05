@@ -32,7 +32,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./'">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./search'">나만의 전기차</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./recom'">추천 정보</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./recomInfo'">추천 정보</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./app'">추천 어플</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./charger'">내 주변 충전소</a></li>    
                     </ul>
@@ -49,9 +49,7 @@
 	                           This application aims to promote electric vehicle purchases by integrating and providing vast and scattered information in a situation where the demand and supply of electric vehicles increases, and recommending electric vehicles that satisfy all the conditions desired by the user in particular.
 	                        </h6>
 	                    </div>
-	                </div>    	                	                
-	            </div>
-            	<div class="container d-flex h-75 align-items-center" style = "width: 50% !important; float: right;">	            
+	                </div> 
 	             	<div class="row">      
 		                <div class="col-lg-12 mx-auto text-right">
 		                    <a class="btn btn-primary js-scroll-trigger" onclick = "location.href='./search'">Pick your car NOW</a>
@@ -60,7 +58,10 @@
 			                    <a class="js-scroll-trigger" style="margin-top:10px;" href="#about"> &gt; 구매 가이드 보기</a>
 		                    </div>
 		                </div>   
-		            </div>                             
+		            </div>	                   	                	                
+	            </div>
+            	<div class="container d-flex h-75 align-items-center" style = "width: 50% !important; float: right;">	            
+                             
 	             </div> 	           
         </header>
        

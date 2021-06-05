@@ -1,5 +1,6 @@
 package com.db.eccar.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,12 +14,14 @@ import com.db.eccar.service.RecomInfoService;
 @Controller
 @RequestMapping(value = "/recomInfo")
 public class RecomInfoController {
-
+	
+	@Autowired
 	RecomInfoService recomInfoService;
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ModelAndView readRecomInfo(ModelAndView mv) {
 		mv.addObject("recomInfo", recomInfoService.readRecomInfo());
+		//System.out.println(mv);
 		mv.setViewName("recomInfo");
 		return mv;
 	}
