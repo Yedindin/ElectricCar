@@ -184,7 +184,7 @@
                 </div>                    
                 
                 <div class="text-center" style = "padding-top: 5%;">
-                	<a class="btn btn-primary js-scroll-trigger" href="#about">Pick your car NOW</a>
+                	<a class="btn btn-primary js-scroll-trigger" onclick = "location.href='./result'">Pick your car NOW</a>
                 </div>
             </div>
         </section>        
