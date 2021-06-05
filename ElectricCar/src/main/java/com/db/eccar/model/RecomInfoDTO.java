@@ -3,6 +3,7 @@ package com.db.eccar.model;
 import java.util.Date;
 
 public class RecomInfoDTO {
+	
 	int post_id;
 	int category_id;
 	String category_name;
@@ -10,6 +11,7 @@ public class RecomInfoDTO {
 	String url;
 	String content;
 	Date regdate;
+	
 	public int getPost_id() {
 		return post_id;
 	}
