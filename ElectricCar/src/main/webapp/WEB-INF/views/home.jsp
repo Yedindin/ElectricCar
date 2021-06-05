@@ -245,9 +245,11 @@
             </div>
         </section>
       -->   <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">
-        
-        <span>Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후</div></footer>
+        <footer class="footer bg-black small text-center text-white-50">
+        <div class="container">
+       	 Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후
+       	</div>
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>

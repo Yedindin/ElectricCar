@@ -44,8 +44,8 @@
         <section class="header-section bg-black">
             <div class="container">
                 <div>
-					<h4 class="text-white">나만의 전기차</h4>
-                   	<h6 class="text-white-50 mx-auto mt-2">조건을 만족하는 전기차 목록입니다. 추천 결과를 확인하세요.</h6>
+					<h4 class="text-white">내 주변 충전소 찾기</h4>
+                   	<h6 class="text-white-50 mx-auto mt-2">거주지 정보를 입력하세요.</h6>
                	</div>             	
             </div>
         </section>
@@ -53,86 +53,73 @@
         <section class="condition-section bg-black">
             <div class="container">
 	          	<div class="card w-100" style = "border-radius: 2rem;">
-		            	<div class="row" style = "justify-content: center">
-			            	<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
-			                	<img src="https://imgauto-phinf.pstatic.net/20210215_24/auto_1613363977843iDeLi_PNG/20210215133934_Ci191Qe5.png?type=f120_87" alt="" "/>			             	
-			             	</div>
-			             	<div class = "col-3" style = "display: flex; flex-direction: column; justify-content: space-around">
-	                               <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg \" 
-									  			style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-									  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  <h5>테슬라 모델 3(1세대)</h5>		    
-									  </button>		
-									</div>
-							</div> 				             	
-			              	<div class="col-6">
-		               		<div class="card-body text-center">	
-			               		<table class="table">
-								  <tbody>
-								    <tr>
-								      <td>가격</td><td>5,479~7,479만원</td>
-								      <td>외장</td><td>세단(중형)</td>
-								    </tr>
-								    <tr>
-								      <td>연료</td><td>전기</td>
-								      <td>연비</td><td>5.8km/kWh</td>
-								    </tr>
-								    <tr>
-								      <td>주행거리</td><td>386km</td>
-								      <td>정원</td><td>5</td>
-								    </tr>
-								  </tbody>
-								</table>
-		                	</div>
-		              	</div>
-		           	</div>
-		          </div>
-				  <div class="card w-100" style = "margin-top: 5%; border-radius: 2rem;">
-				  	<div class="row" style = "justify-content: center">
-						<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
-				    		<img src="https://imgauto-phinf.pstatic.net/20210215_24/auto_1613363977843iDeLi_PNG/20210215133934_Ci191Qe5.png?type=f120_87" alt="" "/>			             	
-				 		</div>
-				 	<div class = "col-3" style = "display: flex; flex-direction: column; justify-content: space-around">
-				        <div class="btn-group">
-							<button class="btn btn-secondary btn-lg \" 
-							style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  		<h5>테슬라 모델 3(1세대)</h5>		    
-						    </button>		
-						</div>
-					</div> 				             	
-				    <div class="col-6">
-				    	<div class="card-body text-center">	
-				        	<table class="table">
-							  <tbody>
-							    <tr>
-							      <td>가격</td><td>5,479~7,479만원</td>
-							      <td>외장</td><td>세단(중형)</td>
-							    </tr>
-							    <tr>
-							      <td>연료</td><td>전기</td>
-							      <td>연비</td><td>5.8km/kWh</td>
-							    </tr>
-							    <tr>
-							      <td>주행거리</td><td>386km</td>
-							      <td>정원</td><td>5</td>
-							    </tr>
-							  </tbody>
-					 		 </table>
-				           	</div>
-				         </div>
-				      	</div>
-				     </div>		          
-				</div> 
-        </section>        
+	          		<div class = "row">
+		            	<div class="col-3 card-body" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
+	                          	<h6 class="text-black-50 text-center">거주지 정보를 입력하세요.</h6>
+	                    </div>
+		             	<div class = "col-5 card-body" style = "display: flex; flex-direction: column; justify-content: space-around">
+	                        <div class="btn-group">
+								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
+								  			style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;" 
+								  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  도/광역시							    
+								  </button>
+								  <div class="dropdown-menu">
+									    <a class="dropdown-item" href="#">경상북도</a>
+								  </div>									  
+								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
+								  			style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;" 
+								  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  시/구							    
+								  </button>									  
+								  <div class="dropdown-menu">
+									    <a class="dropdown-item" href="#">포항시</a>
+									    <a class="dropdown-item" href="#">포항시</a>
+								  </div>
+							</div>  
+						</div> 				
+					</div>
+		            <div class="btn-group">
+                    	  <a class="btn btn-primary js-scroll-trigger" style = "border-radius: 1.5rem;" href="#about">찾아보기</a>
+		            
+<!-- 						  <button class="btn btn-primary btn-sm js-scroll-trigger"
+						  			style = "border-radius: 2rem;"
+						  			type="button" aria-haspopup="true" aria-expanded="false">
+						  <h5>찾아보기</h5>		    
+						  </button>	 -->	
+					</div>		
+				</div>			
+            </div>
+        </section>  
         
+        <section class="about-section bg-black" id="about">
+            <div class="container">       
+	   			<table class="table text-white">  
+	   				<thead>
+					    <tr>
+					      <th scope="col">충전소 명</th>
+					      <th scope="col">주소</th>
+					    </tr>
+				  	</thead>
+				  <tbody>
+					    <tr>
+					      <td>포항시청</td><td>경상북도 포항시 북구</td>
+					    </tr>
+					    <tr>
+					      <td>한동대학교</td><td>경상북도 포항시 북구</td>
+					    </tr>
+				  </tbody>
+				</table>  
+			</div>
+		</section>    
+ 
         <!-- Footer-->
        <footer class="footer bg-black small text-center text-white-50">
        <div class="container">
       	 Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후
        </div>
        </footer>
+       
        <!-- Bootstrap core JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -141,4 +128,5 @@
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
     </body>
+    
 </html>
