@@ -54,62 +54,17 @@
         <section class="condition-section bg-black">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style = "padding-top: 20px;">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-								<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						    		<img src="https://blog.hmgjournal.com/images_n/contents/organicCar-app-02.jpg" alt=""/>			             	
-						 		</div>                            
-                            </div>
-                        </div>
-                    </div>
+                	<c:forEach items="${app}" var="app" varStatus="status">
+	                    <div class="col-md-4 mb-3 mb-md-0"  style = "margin-top: 2rem">
+	                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
+	                            <div class="card-body text-center">
+									<div class="w-100 card-img" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
+							    		<img src="${app.img}" alt=""/>			             	
+							 		</div>                            
+	                            </div>
+	                        </div>
+	                    </div>
+                    </c:forEach>
                 </div>                 
             </div>
         </section>        

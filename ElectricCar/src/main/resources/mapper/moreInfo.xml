@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MoreInfo">
+
+	<select id="readMoreInfo" resultType="com.db.eccar.model.AppDTO" parameterType="hashmap">
+		SELECT app_id as id, app_name as name, description, img
+		FROM MoreInfo
+ 	</select>
+
+ </mapper>
