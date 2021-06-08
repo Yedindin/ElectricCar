@@ -60,13 +60,16 @@
 	                    </div>
 		             	<div class = "col-5 card-body" style = "display: flex; flex-direction: column; justify-content: space-around">
 	                        <div class="btn-group">
+	                        	
 								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
 								  			style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;" 
 								  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								  도/광역시							    
 								  </button>
 								  <div class="dropdown-menu">
-									    <a class="dropdown-item" href="#">경상북도</a>
+								  		<c:forEach items="${address}" var="address" varStatus="status">
+									    	<a class="dropdown-item" href="#">${address.special_do_name }</a>
+									    </c:forEach>
 								  </div>									  
 								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
 								  			style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;" 
@@ -76,7 +79,9 @@
 								  <div class="dropdown-menu">
 									    <a class="dropdown-item" href="#">포항시</a>
 									    <a class="dropdown-item" href="#">포항시</a>
+									    
 								  </div>
+								  
 							</div>  
 						</div> 				
 					</div>
@@ -97,18 +102,34 @@
             <div class="container">       
 	   			<table class="table text-white">  
 	   				<thead>
-					    <tr>
-					      <th scope="col">충전소 명</th>
-					      <th scope="col">주소</th>
-					    </tr>
+					    <tr>	
+							<th scope='col' style = "display: inline-block; width: 40%; text-align: center;">충전소명</th>
+	               			<th scope='col' style = "display: inline-block; width: 30%; text-align: center;">주소</th>
+	               			<th scope='col' style = "display: inline-block; width: 15%; text-align: center;">급속충전여부</th>
+	               			<th scope='col' style = "display: inline-block; width: 15%; text-align: center;">완속충전여부</th>
+              			</tr>
 				  	</thead>
 				  <tbody>
-					    <tr>
-					      <td>포항시청</td><td>경상북도 포항시 북구</td>
-					    </tr>
-					    <tr>
-					      <td>한동대학교</td><td>경상북도 포항시 북구</td>
-					    </tr>
+					    <c:forEach items="${charger}" var="charger" varStatus="status">
+						    <tr>
+						      <td style = "display: inline-block; width: 40%; ">${charger.station_name}</td>
+						      <td style = "display: inline-block; width: 30%; text-align: center;">${charger.address_name}</td>
+						      <c:if test="${charger.fast_yn eq 1}">
+ 								 <td style = "display: inline-block; width: 15%; text-align: center;">O</td>
+ 							  </c:if>
+ 							  <c:if test="${charger.fast_yn eq 0}">
+ 								 <td style = "display: inline-block; width: 15%; text-align: center;">X</td>
+ 							  </c:if>
+ 							 <%-- <td style = "display: inline-block; width: 15%;">${charger.fast_yn}</td>
+						      --%> 
+						      <c:if test="${charger.normal_yn eq 1}">
+ 								 <td style = "display: inline-block; width: 15%; text-align: center;">O</td>
+ 							  </c:if>
+ 							  <c:if test="${charger.normal_yn eq 0}">
+ 								 <td style = "display: inline-block; width: 15%; text-align: center;">X</td>
+ 							  </c:if>
+						    </tr>			               					               		
+	               		</c:forEach>
 				  </tbody>
 				</table>  
 			</div>

@@ -7,6 +7,7 @@ public class StationDTO {
 	int fast_yn;
 	int normal_yn;
 	int address_id;
+	String address_name;
 	
 	public int getStation_id() {
 		return station_id;
@@ -25,6 +26,7 @@ public class StationDTO {
 	}
 	public void setFast_yn(int fast_yn) {
 		this.fast_yn = fast_yn;
+	
 	}
 	public int getNormal_yn() {
 		return normal_yn;
@@ -37,6 +39,13 @@ public class StationDTO {
 	}
 	public void setAddress_id(int address_id) {
 		this.address_id = address_id;
+	}
+	
+	public String getAddress_name() {
+		return address_name;
+	}
+	public void setAddress_name(String address_name) {
+		this.address_name = address_name;
 	}
 	@Override
 	public String toString() {
