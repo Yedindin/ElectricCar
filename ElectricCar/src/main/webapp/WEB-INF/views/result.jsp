@@ -53,48 +53,10 @@
         <!-- Contact-->
         <section class="condition-section bg-black">
             <div class="container">
-	          	<div class="card w-100" style = "border-radius: 2rem;">
-		            	<div class="row" style = "justify-content: center">
-			            	<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
-			                	<img src="https://imgauto-phinf.pstatic.net/20210215_24/auto_1613363977843iDeLi_PNG/20210215133934_Ci191Qe5.png?type=f120_87" alt="" "/>			             	
-			             	</div>
-			             	<div class = "col-3" style = "display: flex; flex-direction: column; justify-content: space-around">
-	                               <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg \" 
-									  			style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-									  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  <h5> car_name (model_name)</h5>		    
-									  </button>		
-									</div>
-							</div> 				             	
-			              	<div class="col-6">
-		               		<div class="card-body text-center">	
-			               		<table class="table">
-								  <tbody>
-								    <tr>
-								      <td>가격</td><td>5,479</td>
-								      <td>크기</td><td>중형</td>
-								    </tr>
-								    <tr>
-								      <td>제로백</td><td>3.0</td>
-								      <td>전비</td><td>5.8km/kWh</td>
-								    </tr>
-								    <tr>
-								      <td>주행거리</td><td>386km</td>
-								      <td>최대출력</td><td>180kw</td>
-								    </tr>
-								    <tr>
-								      <td>최대 보조금</td><td>1700만원</td>
-								    </tr>
-								  </tbody>
-								</table>
-		                	</div>
-		              	</div>
-		           	</div>
-		          </div>
-      	    		<c:forEach items="${result}" var="result" varStatus="status">
-		          
-				  <div class="card w-100" style = "margin-top: 5%; border-radius: 2rem;">
+
+  	    		<c:forEach items="${result}" var="result" varStatus="status">
+		          <div style = "padding-top: 1%; border-radius: 2rem; background-color:black;">
+				  <div class="card w-100" style = "margin-top: 3%; border-radius: 2rem; ">
 				  
 				  	<div class="row" style = "justify-content: center">
 				  	
@@ -107,7 +69,7 @@
 							<button class="btn btn-secondary btn-lg \" 
 							style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
 							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  		<h5>Car_name (Model_name)</h5>		    
+						  		<h5>${result.car_name}(${result.model_name})</h5>		    
 						    </button>		
 						</div>
 					</div> 
@@ -116,9 +78,18 @@
 				    	<div class="card-body text-center">	
 				        	<table class="table">
 							  <tbody>
+							  <c:set var="type" value="${result.car_type}"/>
 								    <tr>
 								      <td>가격</td><td>${result.price}만원</td>
-								      <td>크기</td><td>${result.car_type}</td>
+								      <c:if test="${ type eq 0 }">
+								      	<td>크기</td><td>초소형</td>
+								      </c:if>
+								      <c:if test="${ type eq 1 }">
+								      	<td>크기</td><td>승용</td>
+								      </c:if>
+								      <c:if test="${ type eq 2 }">
+								      	<td>크기</td><td>화물</td>
+								      </c:if>
 								    </tr>
 								    <tr>
 								      <td>제로백</td><td>${result.zero_to_hundred}s</td>
@@ -139,6 +110,7 @@
 				         
 				      	</div>
 				     </div>		
+				     </div>
 				     </c:forEach>    
 				</div> 
 				
