@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -59,9 +60,49 @@
 	                          	<h6 class="text-black-50 text-center">거주지 정보를 입력하세요.</h6>
 	                    </div>
 		             	<div class = "col-5 card-body" style = "display: flex; flex-direction: column; justify-content: space-around">
-	                        <div class="btn-group">
-	                        	
-								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
+							  </div>
+							  <select class="custom-select" id = "input_special_do_id" onchange = "findSigoongoo_id()">
+							    <option selected>Choose...</option>
+							  <c:forEach items="${address}" var="address">							    
+								<option value="${address.special_do_id}">${address.special_do_name}</option>
+							  </c:forEach>								
+							  </select>
+							  <button class = "button col s4 btn-secondary btn-sm" 
+							  style = "background-color: rgba(0, 0, 0, 0.5) !important;"
+							  >다음</button>
+							  
+							</div>
+							<p id="demo"></p>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <label class="input-group-text" for="inputGroupSelect01">시/구</label>
+							  </div>
+							  <select class="custom-select" id="inputGroupSelect01">
+							    <option selected>Choose...</option>
+							  <c:forEach items="${sigoongoo}" var="sigoongoo">							    
+								<option value="${sigoongoo.sigoongoo_id}">${sigoongoo.sigoongoo_name}</option>
+							  </c:forEach>							  								
+							  </select>
+							</div >							
+<%-- 	                        <div class="btn-group">
+							<div id="selectHtml" class="button col s4 btn btn-secondary btn-lg dropdown-toggle" 
+							style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;">
+								<select id="siteName" required>
+									<optgroup label="코딩사이트 선택">
+										<c:forEach items="${address}" var="address">
+											<option value="${address.sigoongoo_id}">${address.special_do_name}</option>
+										</c:forEach>
+									</optgroup>
+									<optgroup label="링크로 입력">
+										<option value="0">링크로 입력</option>
+									</optgroup>
+								</select>
+								<label>코딩사이트 선택</label> 
+							</div>	 --%>	                        	
+<%-- 								  <button class="btn btn-secondary btn-lg dropdown-toggle" 
 								  			style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;" 
 								  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								  도/광역시							    
@@ -80,13 +121,14 @@
 									    <a class="dropdown-item" href="#">포항시</a>
 									    <a class="dropdown-item" href="#">포항시</a>
 									    
-								  </div>
+								  </div> --%>
 								  
-							</div>  
+<!-- 							</div> 
+ -->						 
 						</div> 				
 					</div>
 		            <div class="btn-group">
-                    	  <a class="btn btn-primary js-scroll-trigger" style = "border-radius: 1.5rem;" href="#about">찾아보기</a>
+                    	  <a class="btn btn-primary js-scroll-trigger" style = "border-radius: 1.5rem;" >찾아보기</a>
 		            
 <!-- 						  <button class="btn btn-primary btn-sm js-scroll-trigger"
 						  			style = "border-radius: 2rem;"

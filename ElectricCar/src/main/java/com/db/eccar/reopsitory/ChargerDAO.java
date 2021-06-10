@@ -10,5 +10,6 @@ public interface ChargerDAO {
 
 	public List<StationDTO> readCharger();
 	public List<AddressDTO> readAddress();
+	public List<AddressDTO> readSiggongoo();
 	
 }
