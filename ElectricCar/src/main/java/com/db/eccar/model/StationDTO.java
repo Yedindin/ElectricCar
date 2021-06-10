@@ -7,6 +7,8 @@ public class StationDTO {
 	int fast_yn;
 	int normal_yn;
 	int address_id;
+	int sigoongoo_id;
+	String sigoongoo_name;	
 	String address_name;
 	
 	public int getStation_id() {
@@ -40,7 +42,18 @@ public class StationDTO {
 	public void setAddress_id(int address_id) {
 		this.address_id = address_id;
 	}
-	
+	public int getSigoongoo_id() {
+		return sigoongoo_id;
+	}
+	public void setSigoongoo_id(int sigoongoo_id) {
+		this.sigoongoo_id = sigoongoo_id;
+	}	
+	public String getSigoongoo_name() {
+		return sigoongoo_name;
+	}
+	public void setSigoongoo_name(String sigoongoo_name) {
+		this.sigoongoo_name = sigoongoo_name;
+	}	
 	public String getAddress_name() {
 		return address_name;
 	}

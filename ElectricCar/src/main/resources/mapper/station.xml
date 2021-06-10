@@ -8,6 +8,11 @@
 		WHERE Station.sigoongoo_id = 1 AND Station.sigoongoo_id = Sigoongoo.sigoongoo_id  AND Sigoongoo.special_do_id = Special_sido.special_do_id;
 	</select>
 	<select id="readAddress" resultType="com.db.eccar.model.AddressDTO" parameterType="hashmap">
-		SELECT special_do_name FROM Special_sido;
+		SELECT * FROM Special_sido
+	</select>
+	<select id="readSiggongoo" resultType="com.db.eccar.model.AddressDTO" parameterType="hashmap">
+		SELECT Sigoongoo.sigoongoo_name
+		FROM Sigoongoo
+		WHERE special_do_id = 1
 	</select>
 </mapper>
