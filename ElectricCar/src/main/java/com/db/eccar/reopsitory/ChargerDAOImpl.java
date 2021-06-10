@@ -30,5 +30,14 @@ public class ChargerDAOImpl implements ChargerDAO {
 		//System.out.println(recomInfolist);
 		return addressList;
 	}
+	@Override
+	public List<AddressDTO> readSiggongoo(){
+		List<AddressDTO> addressList = new ArrayList<AddressDTO>();
+		addressList = sqlSession.selectList("Station.readSiggongoo");
+		//System.out.println(recomInfolist);
+		return addressList;
+	}
+	
+	
 
 }

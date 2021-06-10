@@ -12,7 +12,7 @@ import com.db.eccar.service.ChargerService;
  * Handles requests for the application home page.
  */
 @Controller
-@RequestMapping(value = "/charger")
+@RequestMapping(value = "/charger", method = RequestMethod.POST)
 public class ChargerController {
 	
 	@Autowired
@@ -22,7 +22,8 @@ public class ChargerController {
 	public ModelAndView readCharger(ModelAndView mv) {
 		mv.addObject("charger", ChargerService.readCharger());
 		mv.addObject("address", ChargerService.readAddress());
-		//System.out.println(mv);
+		mv.addObject("sigoongoo", ChargerService.readSiggongoo());
+		System.out.println(mv);
 		mv.setViewName("charger");
 		return mv;
 	}
