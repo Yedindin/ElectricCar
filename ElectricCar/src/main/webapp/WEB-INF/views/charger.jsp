@@ -64,19 +64,20 @@
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
 							  </div>
-							  <select class="custom-select" id = "input_special_do_id" onchange = "findSigoongoo_id()">
+							  <select class="custom-select" id = "input_special_do_id" onchange = "findSigoongoo_id_test()">
 							    <option selected>Choose...</option>
 							  <c:forEach items="${address}" var="address">							    
 								<option value="${address.special_do_id}">${address.special_do_name}</option>
 							  </c:forEach>								
 							  </select>
-							  <button class = "button col s4 btn-secondary btn-sm" 
-							  style = "background-color: rgba(0, 0, 0, 0.5) !important;"
-							  >다음</button>
 							  
 							</div>
 							<p id="demo"></p>
-							<div class="input-group mb-3">
+							<div id="sigoongoo">
+								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
+							</div>
+							
+<%-- 							<div class="input-group mb-3">
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">시/구</label>
 							  </div>
@@ -86,7 +87,7 @@
 								<option value="${sigoongoo.sigoongoo_id}">${sigoongoo.sigoongoo_name}</option>
 							  </c:forEach>							  								
 							  </select>
-							</div >							
+							</div >	 --%>						
 <%-- 	                        <div class="btn-group">
 							<div id="selectHtml" class="button col s4 btn btn-secondary btn-lg dropdown-toggle" 
 							style = "background-color: rgba(0, 0, 0, 0.5) !important; margin: 0.3rem;">

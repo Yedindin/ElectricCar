@@ -13,6 +13,6 @@
 	<select id="readSiggongoo" resultType="com.db.eccar.model.AddressDTO" parameterType="hashmap">
 		SELECT Sigoongoo.sigoongoo_name
 		FROM Sigoongoo
-		WHERE special_do_id = 1
+		WHERE special_do_id = #{id}
 	</select>
 </mapper>

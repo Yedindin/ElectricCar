@@ -54,18 +54,18 @@
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
 
-/*function findSigoongoo_id() {	
-	var special_do_id = $('#input_special_do_id').html();
+function findSigoongoo_id() {	
+	//$('#input_special_do_id').val()var special_do_id = $('#input_special_do_id').val();
 
 		$.ajax({
-			url : "charger",
+			url : "charger/sigoongooContent",
 			type : "POST",
 			async : false,
 			data : {
-				special_do_id : special_do_id,
+				id : $('#input_special_do_id').html()
 			},
 			success : function(data) {
-				alert(special_do_id);
+				console.log(data)
 			},
 			error : function(request, status, error) {
 				console.log("code:" + request.status + "\n"
@@ -73,10 +73,34 @@
 						+ "error:" + error);
 			}
 		});
-}*/
-function findSigoongoo_id() {
+}
+function findSigoongoo_id_test() {
 var special_do_id = $('#input_special_do_id').html();
 
-  var x = document.getElementById("input_special_do_id").value;
-  document.getElementById("demo").innerHTML = "You selected: " + x;
+  var id = document.getElementById("input_special_do_id").value;
+  //document.getElementById("demo").innerHTML = "You selected: " + id;
+  
+  		$.ajax({
+			url : "./charger/sigoongooContent",
+			type : "POST",
+			async : false,
+			data : {
+				id : id
+			},
+			success : function(data) {
+				console.log(data);
+				$('#sigoongoo').html(data);
+				console.log($('#sigoongoo').html());
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n"
+						+ "message:" + request.responseText + "\n"
+						+ "error:" + error);
+			}
+		});
 }
+/*
+function Sigoongoo_id() {
+  var x = document.getElementById("input_special_do_id").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;	
+}*/
