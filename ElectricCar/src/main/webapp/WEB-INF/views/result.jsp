@@ -63,7 +63,7 @@
 									  <button class="btn btn-secondary btn-lg \" 
 									  			style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
 									  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  <h5>테슬라 모델 3(1세대)</h5>		    
+									  <h5> car_name (model_name)</h5>		    
 									  </button>		
 									</div>
 							</div> 				             	
@@ -72,16 +72,19 @@
 			               		<table class="table">
 								  <tbody>
 								    <tr>
-								      <td>가격</td><td>5,479~7,479만원</td>
-								      <td>외장</td><td>세단(중형)</td>
+								      <td>가격</td><td>5,479</td>
+								      <td>크기</td><td>중형</td>
 								    </tr>
 								    <tr>
-								      <td>연료</td><td>전기</td>
-								      <td>연비</td><td>5.8km/kWh</td>
+								      <td>제로백</td><td>3.0</td>
+								      <td>전비</td><td>5.8km/kWh</td>
 								    </tr>
 								    <tr>
 								      <td>주행거리</td><td>386km</td>
-								      <td>정원</td><td>5</td>
+								      <td>최대출력</td><td>180kw</td>
+								    </tr>
+								    <tr>
+								      <td>최대 보조금</td><td>1700만원</td>
 								    </tr>
 								  </tbody>
 								</table>
@@ -99,7 +102,7 @@
 							<button class="btn btn-secondary btn-lg \" 
 							style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
 							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  		<h5>테슬라 모델 3(1세대)</h5>		    
+						  		<h5>Car_name (Model_name)</h5>		    
 						    </button>		
 						</div>
 					</div> 				             	
@@ -107,19 +110,22 @@
 				    	<div class="card-body text-center">	
 				        	<table class="table">
 							  <tbody>
-							    <tr>
-							      <td>가격</td><td>5,479~7,479만원</td>
-							      <td>외장</td><td>세단(중형)</td>
-							    </tr>
-							    <tr>
-							      <td>연료</td><td>전기</td>
-							      <td>연비</td><td>5.8km/kWh</td>
-							    </tr>
-							    <tr>
-							      <td>주행거리</td><td>386km</td>
-							      <td>정원</td><td>5</td>
-							    </tr>
-							  </tbody>
+								    <tr>
+								      <td>가격</td><td>5,479</td>
+								      <td>크기</td><td>중형</td>
+								    </tr>
+								    <tr>
+								      <td>제로백</td><td>3.0</td>
+								      <td>전비</td><td>5.8km/kWh</td>
+								    </tr>
+								    <tr>
+								      <td>주행거리</td><td>386km</td>
+								      <td>최대출력</td><td>180kw</td>
+								    </tr>
+								    <tr>
+								      <td>최대 보조금</td><td>1700만원</td>
+								    </tr>
+								  </tbody>
 					 		 </table>
 				           	</div>
 				         </div>
