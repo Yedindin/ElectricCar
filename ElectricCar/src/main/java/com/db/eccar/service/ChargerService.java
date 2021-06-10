@@ -9,4 +9,6 @@ public interface ChargerService {
 
 	public List<StationDTO> readCharger();
 	public List<AddressDTO> readAddress();
+	public List<AddressDTO> readSiggongoo();
+	
 }

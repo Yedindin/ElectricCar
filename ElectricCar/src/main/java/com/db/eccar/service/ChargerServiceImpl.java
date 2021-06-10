@@ -28,5 +28,9 @@ public class ChargerServiceImpl implements ChargerService{
 		List<AddressDTO> result = ChargerDAO.readAddress();
 		return result;
 	}
-	
+	@Override
+	public List<AddressDTO> readSiggongoo(){
+		List<AddressDTO> result = ChargerDAO.readSiggongoo();
+		return result;
+	}	
 }

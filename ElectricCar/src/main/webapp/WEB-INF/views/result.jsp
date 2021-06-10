@@ -95,7 +95,10 @@
 				  <div class="card w-100" style = "margin-top: 5%; border-radius: 2rem;">
 				  	<div class="row" style = "justify-content: center">
 						<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
-				    		<img src="https://imgauto-phinf.pstatic.net/20210215_24/auto_1613363977843iDeLi_PNG/20210215133934_Ci191Qe5.png?type=f120_87" alt="" "/>			             	
+				    		<c:forEach items="${result}" var="result" varStatus="status">
+				    		
+				    		<img src=${result.picture} alt="" "/>			             	
+				 			</c:forEach>
 				 		</div>
 				 	<div class = "col-3" style = "display: flex; flex-direction: column; justify-content: space-around">
 				        <div class="btn-group">
@@ -110,8 +113,9 @@
 				    	<div class="card-body text-center">	
 				        	<table class="table">
 							  <tbody>
+							  	<c:forEach items="${result}" var="result" varStatus="status">
 								    <tr>
-								      <td>가격</td><td>5,479</td>
+								      <td>가격</td><td>result.price</td>
 								      <td>크기</td><td>중형</td>
 								    </tr>
 								    <tr>
@@ -125,7 +129,8 @@
 								    <tr>
 								      <td>최대 보조금</td><td>1700만원</td>
 								    </tr>
-								  </tbody>
+								   </c:forEach>
+								</tbody>
 					 		 </table>
 				           	</div>
 				         </div>
