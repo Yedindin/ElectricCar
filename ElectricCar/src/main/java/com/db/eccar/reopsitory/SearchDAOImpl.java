@@ -20,7 +20,7 @@ public class SearchDAOImpl implements SearchDAO{
 	public List<SearchDTO> readSearch() {
 		List<SearchDTO> searchInfolist = new ArrayList<SearchDTO>();
 		searchInfolist = sqlSession.selectList("Search.readSearch");
-		//System.out.println(recomInfolist);
+		System.out.println(searchInfolist);
 		return searchInfolist;
 	}
 	
