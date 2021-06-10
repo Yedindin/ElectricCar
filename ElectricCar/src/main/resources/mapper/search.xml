@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Search">
+
+	<select id="readSearch" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
+		SELECT picture, M.car_name, M.model_name, price, zero_to_hundred, max_mileage, car_type, km_kwh, power_kw, amount
+		FROM ElectricCar E JOIN Brands B ON E.brand_id = B.brand_id JOIN Model M ON E.car_id = M.car_id JOIN Performance P on M.model_id = P.model_id, Subsidy as S
+		WHERE S.sigoongoo_id = 1 AND S.car_size = 1 AND E.car_type = 1 AND
+      	B.brand_id = 1 AND price BETWEEN 1000 AND 15000;
+     </select>
+
+ </mapper>
