@@ -54,7 +54,7 @@
         <section class="condition-section bg-black">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
                             <div class="card-body text-center">
                                 <i class="fas fa-building text-primary mb-2"></i>
@@ -64,15 +64,15 @@
 									    브랜드를 선택하세요
 									  </button>
 									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">BMW</a>
-										    <a class="dropdown-item" href="#">HYUNDAI</a>
-										    <a class="dropdown-item" href="#">KIA</a>							
+										   <c:forEach items="${brand}" var="brand" varStatus="status">
+									    	<a class="dropdown-item" href="#">${brand.brand_name}</a>
+									    </c:forEach>							
 									  </div>
 								</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
                             <div class="card-body text-center">
                                 <i class="fas fa-dollar-sign text-primary mb-2"></i>
@@ -82,42 +82,25 @@
 									    가격대를 입력하세요
 									  </button>
 									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">BMW</a>
-										    <a class="dropdown-item" href="#">HYUNDAI</a>
-										    <a class="dropdown-item" href="#">KIA</a>							
+										    <a class="dropdown-item" href="#">0 ~ 1000</a>
+										    <a class="dropdown-item" href="#">1000 ~ 2000</a>
+										    <a class="dropdown-item" href="#">2000 ~ 3000</a>
+										    <a class="dropdown-item" href="#">3000 ~ 4000</a>
+										    <a class="dropdown-item" href="#">4000 ~ 5000</a>
+										    <a class="dropdown-item" href="#">5000 ~ 6000</a>
+										    <a class="dropdown-item" href="#">6000 ~ 7000</a>
+										    <a class="dropdown-item" href="#">7000 ~ 8000</a>
+										 	<a class="dropdown-item" href="#">8000 ~ 9000</a>
+										 	<a class="dropdown-item" href="#">9000 ~ 10000</a>
+										 	<a class="dropdown-item" href="#">1억 이상</a>						
 									  </div>
 								</div>                                
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-                                <i class="fas fa-users text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0 btn-title">인승</h4>
-                                <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" style = "background-color: rgba(0, 0, 0, 0.5) !important;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    인승을 선택하세요
-									  </button>
-									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">1인승</a>
-										    <a class="dropdown-item" href="#">2인승</a>
-										    <a class="dropdown-item" href="#">3인승</a>
-										    <a class="dropdown-item" href="#">4인승</a>							
-										    <a class="dropdown-item" href="#">5인승</a>							
-										    <a class="dropdown-item" href="#">6인승</a>							
-										    <a class="dropdown-item" href="#">7인승</a>		
-										    <a class="dropdown-item" href="#">8인승</a>																	    							
-										    <a class="dropdown-item" href="#">9인승</a>																	    																	    															    							
-									  </div>
-								</div> 
-<!--                                 <hr class="my-4" />								 
- -->                            </div>
-                        </div>
                     </div>
-                </div>
                 <div class="row" style = "padding-top: 20px;">
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
                             <div class="card-body text-center">
                                 <i class="fas fa-wallet text-primary mb-2"></i>
@@ -136,26 +119,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <div class="card-body text-center">
-                                <i class="fas fa-road text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0 btn-title">최대 주행 거리</h4>
-                                <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" 
-									  			style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-									  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  최대 주행 거리를 선택하세요							    
-									  </button>
-									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">100</a>
-										    <a class="dropdown-item" href="#">200</a>	
-									  </div>
-								</div>                                 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>

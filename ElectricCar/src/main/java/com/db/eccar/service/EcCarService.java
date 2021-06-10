@@ -1,5 +1,9 @@
 package com.db.eccar.service;
 
-public class EcCarService {
+import java.util.List;
 
+import com.db.eccar.model.EccarDTO;
+
+public interface EcCarService {
+	public List<EccarDTO> readBrand();
 }
