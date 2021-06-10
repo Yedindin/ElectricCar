@@ -92,13 +92,15 @@
 		              	</div>
 		           	</div>
 		          </div>
+      	    		<c:forEach items="${result}" var="result" varStatus="status">
+		          
 				  <div class="card w-100" style = "margin-top: 5%; border-radius: 2rem;">
+				  
 				  	<div class="row" style = "justify-content: center">
+				  	
 						<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
-				    		<c:forEach items="${result}" var="result" varStatus="status">
 				    		
-				    		<img src=${result.picture} alt="" "/>			             	
-				 			</c:forEach>
+				    		<img src="${result.picture}" alt="" />			             	
 				 		</div>
 				 	<div class = "col-3" style = "display: flex; flex-direction: column; justify-content: space-around">
 				        <div class="btn-group">
@@ -108,35 +110,38 @@
 						  		<h5>Car_name (Model_name)</h5>		    
 						    </button>		
 						</div>
-					</div> 				             	
+					</div> 
+									             	
 				    <div class="col-6">
 				    	<div class="card-body text-center">	
 				        	<table class="table">
 							  <tbody>
-							  	<c:forEach items="${result}" var="result" varStatus="status">
 								    <tr>
-								      <td>가격</td><td>result.price</td>
-								      <td>크기</td><td>중형</td>
+								      <td>가격</td><td>${result.price}만원</td>
+								      <td>크기</td><td>${result.car_type}</td>
 								    </tr>
 								    <tr>
-								      <td>제로백</td><td>3.0</td>
-								      <td>전비</td><td>5.8km/kWh</td>
+								      <td>제로백</td><td>${result.zero_to_hundred}s</td>
+								      <td>전비</td><td>${result.km_kwh}km/kwh</td>
 								    </tr>
 								    <tr>
-								      <td>주행거리</td><td>386km</td>
-								      <td>최대출력</td><td>180kw</td>
+								      <td>주행거리</td><td>${result.max_mileage}km</td>
+								      <td>최대출력</td><td>${result.power_kw}kw</td>
 								    </tr>
 								    <tr>
-								      <td>최대 보조금</td><td>1700만원</td>
+								      <td>최대 보조금</td><td>${result.amount}만원</td>
 								    </tr>
-								   </c:forEach>
 								</tbody>
 					 		 </table>
 				           	</div>
 				         </div>
+				         								  
+				         
 				      	</div>
-				     </div>		          
+				     </div>		
+				     </c:forEach>    
 				</div> 
+				
         </section>        
         
         <!-- Footer-->
