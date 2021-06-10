@@ -64,9 +64,9 @@
 									    브랜드를 선택하세요
 									  </button>
 									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">BMW</a>
-										    <a class="dropdown-item" href="#">HYUNDAI</a>
-										    <a class="dropdown-item" href="#">KIA</a>							
+										   <c:forEach items="${brand}" var="brand" varStatus="status">
+									    	<a class="dropdown-item" href="#">${brand.brand_name}</a>
+									    </c:forEach>							
 									  </div>
 								</div>
                             </div>
@@ -82,9 +82,17 @@
 									    가격대를 입력하세요
 									  </button>
 									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">BMW</a>
-										    <a class="dropdown-item" href="#">HYUNDAI</a>
-										    <a class="dropdown-item" href="#">KIA</a>							
+										    <a class="dropdown-item" href="#">0 ~ 1000</a>
+										    <a class="dropdown-item" href="#">1000 ~ 2000</a>
+										    <a class="dropdown-item" href="#">2000 ~ 3000</a>
+										    <a class="dropdown-item" href="#">3000 ~ 4000</a>
+										    <a class="dropdown-item" href="#">4000 ~ 5000</a>
+										    <a class="dropdown-item" href="#">5000 ~ 6000</a>
+										    <a class="dropdown-item" href="#">6000 ~ 7000</a>
+										    <a class="dropdown-item" href="#">7000 ~ 8000</a>
+										 	<a class="dropdown-item" href="#">8000 ~ 9000</a>
+										 	<a class="dropdown-item" href="#">9000 ~ 10000</a>
+										 	<a class="dropdown-item" href="#">1억 이상</a>						
 									  </div>
 								</div>                                
                             </div>
@@ -148,8 +156,15 @@
 									  최대 주행 거리를 선택하세요							    
 									  </button>
 									  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">100</a>
-										    <a class="dropdown-item" href="#">200</a>	
+									        <a class="dropdown-item" href="#"> 고려안함 </a>
+										    <a class="dropdown-item" href="#">100 ~ 200</a>
+										    <a class="dropdown-item" href="#">200 ~ 300</a>
+										    <a class="dropdown-item" href="#">300 ~ 400</a>	
+										    <a class="dropdown-item" href="#">400 ~ 500</a>	
+										    <a class="dropdown-item" href="#">500 ~ 600</a>	
+										    <a class="dropdown-item" href="#">600 ~ 700</a>
+										    <a class="dropdown-item" href="#">700 이상</a>
+										    	
 									  </div>
 								</div>                                 
                             </div>

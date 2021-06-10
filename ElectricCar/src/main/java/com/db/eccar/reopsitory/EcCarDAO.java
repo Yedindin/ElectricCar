@@ -1,5 +1,11 @@
 package com.db.eccar.reopsitory;
 
-public class EcCarDAO {
+import java.util.List;
 
+import com.db.eccar.model.EccarDTO;
+
+
+public interface EcCarDAO {
+	public List<EccarDTO> readBrand();
+	
 }
