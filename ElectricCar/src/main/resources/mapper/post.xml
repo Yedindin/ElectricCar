@@ -4,9 +4,8 @@
 <mapper namespace="Post">
 
 	<select id="readRecomInfo" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
-		SELECT Post.post_id, Category.category_id, category_name, title, url, content, regdate FROM ((electric_car.Category 
-		INNER JOIN electric_car.Post_category ON electric_car.Category.category_id = electric_car.Post_category.category_id)
-		INNER JOIN electric_car.Post ON electric_car.Post_category.post_id = electric_car.Post.post_id);	
+		SELECT *
+		FROM Post_Category	
  	</select>
  	
  	<select id="readCategory" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">

@@ -19,9 +19,10 @@ public class ChargerDAOImpl implements ChargerDAO {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<StationDTO> readCharger() {
-		List<StationDTO> chargerlist = new ArrayList<StationDTO>();
-		chargerlist = sqlSession.selectList("Station.readStation");
+	public List<StationDTO> readCharger(int sigoongoo_id) {
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("sigoongoo_id", sigoongoo_id);
+		List<StationDTO> chargerlist = sqlSession.selectList("Station.readStation", param);
 		//System.out.println(recomInfolist);
 		return chargerlist;
 	}

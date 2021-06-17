@@ -16,9 +16,9 @@ public class ChargerServiceImpl implements ChargerService{
 	ChargerDAO ChargerDAO;
 	
 	@Override
-	public List<StationDTO> readCharger() {
+	public List<StationDTO> readCharger(int sigoongoo_id) {
 		
-		List<StationDTO> result = ChargerDAO.readCharger();
+		List<StationDTO> result = ChargerDAO.readCharger(sigoongoo_id);
 		
 		return result;
 		

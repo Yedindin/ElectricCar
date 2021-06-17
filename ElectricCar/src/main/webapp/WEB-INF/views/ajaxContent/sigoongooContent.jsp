@@ -7,9 +7,9 @@
 	<div class="input-group-prepend">
     	<label class="input-group-text" for="inputGroupSelect01">시/구</label>
   	</div>
-  	<select class="custom-select" id="inputGroupSelect01">
+  	<select class="custom-select" id="input_sigoongoo_id">
     <option selected>Choose...</option>
-  	<c:forEach items="${sigoongoo}" var="sigoongoo" varStatus = "status">						    
+  	<c:forEach items="${sigoongoo}" var="sigoongoo">						    
 		<option value="${sigoongoo.sigoongoo_id}">${sigoongoo.sigoongoo_name}</option>
 	</c:forEach>	
   	</select>  	
