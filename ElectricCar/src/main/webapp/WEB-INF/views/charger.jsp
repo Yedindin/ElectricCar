@@ -76,8 +76,11 @@
 							<div id="sigoongoo">
 								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
 							</div>
-							
-<%-- 							<div class="input-group mb-3">
+						</div> 				
+					</div>
+		            <div class="btn-group">
+                    	  <a class="btn btn-primary js-scroll-trigger" style = "border-radius: 1.5rem;" >찾아보기</a>
+		            <%-- 							<div class="input-group mb-3">
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">시/구</label>
 							  </div>
@@ -126,16 +129,12 @@
 								  
 <!-- 							</div> 
  -->						 
-						</div> 				
-					</div>
-		            <div class="btn-group">
-                    	  <a class="btn btn-primary js-scroll-trigger" style = "border-radius: 1.5rem;" >찾아보기</a>
-		            
 <!-- 						  <button class="btn btn-primary btn-sm js-scroll-trigger"
 						  			style = "border-radius: 2rem;"
 						  			type="button" aria-haspopup="true" aria-expanded="false">
 						  <h5>찾아보기</h5>		    
 						  </button>	 -->	
+						  
 					</div>		
 				</div>			
             </div>
