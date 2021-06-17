@@ -55,22 +55,22 @@
 	</section>
 	<!-- Contact-->
 	<form>
-	<section class="condition-section bg-black">
-		<div class="container">
-			<div class="card w-100" style="border-radius: 2rem;">
-				<div class="row">
-					<div class=" card-body"
-						style="display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-						
-<!-- 						<div class="card-body" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
-	                          	<h6 class="text-black-50 text-center">카테고리를 선택하세요.</h6>
-	                    </div> -->
-
-							<div class=" card-body" style="display: flex; margin-left: 0.3rem;">
+		<section class="condition-section bg-black">
+			<div class="container">
+				<div class="card w-100" style="border-radius: 2rem;">
+					<div class="row">
+						<div class=" card-body"
+							style="display: flex; flex-direction: column; justify-content: space-around; padding: 20px 40px;">
+							<div class="col-6 card-body"
+								style="display: flex; flex-direction: column; justify-content: space-around; text-align: left">
+								<h5 class="text-black-50 text-left">추천 정보 글 작성하기</h5>
+							</div>
+							<div class=" card-body"
+								style="display: flex; margin-left: 0.3rem; padding: 0.5rem 0.7rem;">
 								<div class="input-group-prepend">
 									<label class="input-group-text" for="inputGroupSelect01">카테고리</label>
 								</div>
-								<select class="custom-select col-6" id="input_special_do_id">
+								<select class="custom-select col-2" id="category_id">
 									<option selected>Choose...</option>
 									<c:forEach items="${readCategory}" var="readCategory">
 										<option value="${readCategory.category_id}">${readCategory.category_name}</option>
@@ -79,20 +79,48 @@
 								<div class="input-group-prepend" style="margin-left: 1.0rem;">
 									<label class="input-group-text" for="inputGroupSelect01">제목</label>
 								</div>
-								<input id="updateTitle" name="updateTitle" type="text"
-									class="validate" value="${recom.title}" />
-							</div>
-							<div class="card-body" style="display: flex;">
-								<div class="input-group-prepend">
-									<label class="input-group-text" for="inputGroupSelect01">제목</label>
+								<input id="title" name="title" type="text"
+									class="validate col-4" style="border: 1px solid #ced4da;"
+									placeholder="글의 제목을 입력해 주세요." required />
+								<div class="input-group-prepend" style="margin-left: 1.0rem;">
+									<label class="input-group-text" for="inputGroupSelect01">P.W</label>
 								</div>
-								<textarea style="resize: both; min-height: 39px;"></textarea>
+								<input id="password" name="password" type="password"
+									class="validate col-auto"
+									style="padding: 0px 0px; border: 1px solid #ced4da;"
+									placeholder=" 비밀번호를 입력해 주세요." required />
+							</div>
+							<div class="card-body"
+								style="display: flex; padding: 0.5rem 1rem;">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">URL</label>
+								</div>
+								<input id="url" name="url" type="text"
+									class="validate col" style="border: 1px solid #ced4da;"
+									placeholder="해당 정보의 출처 URL을 입력해 주세요." required />
+							</div>
+							<div class="card-body"
+								style="display: flex; padding: 0.5rem 1rem;">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">내용</label>
+								</div>
+								<textarea id="content" class="col"
+									style="resize: vertical; min-height: 39px; border: 1px solid #ced4da;"
+									placeholder="내용을 작성해 주세요." required></textarea>
+							</div>
+							<div class="card-body"
+								style="text-align: right; padding: 0.5rem 1rem;">
+								<div align="right" class="btn-group">
+									<a id="findCharger" class="btn btn-primary js-scroll-trigger"
+										style="border-radius: 1.5rem; padding: 15px;"
+										onclick="findCharger_id()">글 작성하기</a>
+								</div>
 							</div>
 						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 	</form>
 	<section class="condition-section bg-black" >
             <div class="container bg-black" style='padding:5rem 0;'>
