@@ -24,6 +24,13 @@ public class RecomInfoDAOImpl implements RecomInfoDAO{
 		return recomInfolist;
 	}
 	
+	@Override
+	public List<RecomInfoDTO> readCategory(){
+		List<RecomInfoDTO> Categorylist = new ArrayList<RecomInfoDTO>();
+		Categorylist = sqlSession.selectList("Post.readCategory");
+		//System.out.println(recomInfolist);
+		return Categorylist;
+	}
 
 	
 }

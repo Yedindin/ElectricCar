@@ -21,10 +21,13 @@ public class RecomInfoController {
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ModelAndView readRecomInfo(ModelAndView mv) {
 		mv.addObject("recomInfo", recomInfoService.readRecomInfo());
+		mv.addObject("readCategory", recomInfoService.readCategory());
 		//System.out.println(mv);
 		mv.setViewName("recomInfo");
 		return mv;
 	}
+	
+	
 	
 	
 }

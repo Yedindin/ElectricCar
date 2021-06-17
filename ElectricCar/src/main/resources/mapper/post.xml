@@ -8,5 +8,10 @@
 		INNER JOIN electric_car.Post_category ON electric_car.Category.category_id = electric_car.Post_category.category_id)
 		INNER JOIN electric_car.Post ON electric_car.Post_category.post_id = electric_car.Post.post_id);	
  	</select>
+ 	
+ 	<select id="readCategory" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
+		SELECT category_id, category_name FROM electric_car.Category;
+ 	</select>
+ 	
 
  </mapper>

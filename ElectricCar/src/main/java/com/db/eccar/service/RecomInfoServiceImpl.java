@@ -22,4 +22,11 @@ public class RecomInfoServiceImpl implements RecomInfoService{
 		return result;
 		
 	}
+	@Override
+	public List<RecomInfoDTO> readCategory(){
+		
+		List<RecomInfoDTO> result = RecomInfoDAO.readCategory();
+		
+		return result;
+	}
 }

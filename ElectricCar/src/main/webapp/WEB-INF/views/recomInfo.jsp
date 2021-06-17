@@ -42,16 +42,59 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <section class="header-section bg-black">
-            <div class="container">
-                <div>
-					<h4 class="text-white">추천 정보</h4>
-                   	<h6 class="text-white-50 mx-auto mt-2">좋은 정보들을 선별하여 추천합니다. 전기차를 구매하실 때 참고하세요 <br>제목을 클릭하면 상세 페이지로 넘어갑니다!</h6>
-               	</div>             	
-            </div>
-        </section>
-        <!-- Contact-->
-        <section class="condition-section bg-black" >
+	<section class="header-section bg-black">
+		<div class="container">
+			<div>
+				<h4 class="text-white">추천 정보</h4>
+				<h6 class="text-white-50 mx-auto mt-2">
+					좋은 정보들을 선별하여 추천합니다. 전기차를 구매하실 때 참고하세요 <br>제목을 클릭하면 상세 페이지로
+					넘어갑니다!
+				</h6>
+			</div>
+		</div>
+	</section>
+	<!-- Contact-->
+	<form>
+	<section class="condition-section bg-black">
+		<div class="container">
+			<div class="card w-100" style="border-radius: 2rem;">
+				<div class="row">
+					<div class=" card-body"
+						style="display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
+						
+<!-- 						<div class="card-body" style = "display: flex; flex-direction: column; justify-content: space-around; padding-left: 0.3rem;">
+	                          	<h6 class="text-black-50 text-center">카테고리를 선택하세요.</h6>
+	                    </div> -->
+
+							<div class=" card-body" style="display: flex; margin-left: 0.3rem;">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">카테고리</label>
+								</div>
+								<select class="custom-select col-6" id="input_special_do_id">
+									<option selected>Choose...</option>
+									<c:forEach items="${readCategory}" var="readCategory">
+										<option value="${readCategory.category_id}">${readCategory.category_name}</option>
+									</c:forEach>
+								</select>
+								<div class="input-group-prepend" style="margin-left: 1.0rem;">
+									<label class="input-group-text" for="inputGroupSelect01">제목</label>
+								</div>
+								<input id="updateTitle" name="updateTitle" type="text"
+									class="validate" value="${recom.title}" />
+							</div>
+							<div class="card-body" style="display: flex;">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">제목</label>
+								</div>
+								<textarea style="resize: both; min-height: 39px;"></textarea>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</form>
+	<section class="condition-section bg-black" >
             <div class="container bg-black" style='padding:5rem 0;'>
 			               		<table class="table text-white bg-black" >
 								  	<tr>

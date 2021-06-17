@@ -5,5 +5,7 @@ import com.db.eccar.model.RecomInfoDTO;
 public interface RecomInfoDAO {
 
 	public List<RecomInfoDTO> readRecomInfo();
+
+	public List<RecomInfoDTO> readCategory();
 	
 }
