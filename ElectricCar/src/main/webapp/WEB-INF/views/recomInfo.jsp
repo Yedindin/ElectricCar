@@ -137,7 +137,7 @@
 								    <tr>
 								      <td style = "display: inline-block; width: 5%;">${recomInfo.post_id}</td>
 								      <td style = "display: inline-block; width: 10%;">${recomInfo.category_name}</td>
-								      <td style = "display: inline-block; width: 22%;"><a href="${recomInfo.url}">${recomInfo.title}</a></td>
+								      <td style = "display: inline-block; width: 22%;"><a href="${recomInfo.url}" target='_blank'>${recomInfo.title}</a></td>
 								      <td style = "display: inline-block; width: 50%;">${recomInfo.content}</td>
 								      <td style = "display: inline-block; width: 13%;">${dateValue}</td>
 								    </tr>			               					               		
