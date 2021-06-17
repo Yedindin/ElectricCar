@@ -22,7 +22,6 @@ public class ChargerController {
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ModelAndView readCharger(ModelAndView mv) {
-		mv.addObject("charger", ChargerService.readCharger());
 		mv.addObject("address", ChargerService.readAddress());
 		System.out.println(mv);
 		mv.setViewName("charger");
@@ -35,7 +34,23 @@ public class ChargerController {
 	public ModelAndView readSigoongoo(ModelAndView mv, @RequestParam(value = "id", defaultValue = "") int id) {
 		mv.addObject("sigoongoo", ChargerService.readSiggongoo(id));
 		System.out.println("받아오는 id" + id);
+		System.out.println("시군구 id" + mv);
 		mv.setViewName("ajaxContent/sigoongooContent");
+		return mv;	
+	}
+
+	@RequestMapping(value = "/chargerContent", method = RequestMethod.GET)
+	@ResponseBody
+	public ModelAndView readCharger(ModelAndView mv,
+			@RequestParam(value = "special_do_id", defaultValue = "") int special_do_id,											
+			@RequestParam(value = "sigoongoo_id", defaultValue = "") int sigoongoo_id) {
+		//mv.addObject("charger", ChargerService.readSiggongoo(id));
+		//System.out.println("special_do_id: " + special_do_id);
+		//System.out.println("sigoongoo_id: " + sigoongoo_id);
+		mv.addObject("charger", ChargerService.readCharger(sigoongoo_id));
+		//System.out.println(mv);
+
+		mv.setViewName("ajaxContent/chargerContent");
 		return mv;	
 	}
 }

@@ -5,13 +5,13 @@
 	<select id="readStation" resultType="com.db.eccar.model.StationDTO" parameterType="hashmap">
 		SELECT station_name, CONCAT(special_do_name, ' ', sigoongoo_name ) AS 'address_name', fast_yn, normal_yn
 		FROM Station, Special_sido, Sigoongoo
-		WHERE Station.sigoongoo_id = 1 AND Station.sigoongoo_id = Sigoongoo.sigoongoo_id  AND Sigoongoo.special_do_id = Special_sido.special_do_id;
+		WHERE Station.sigoongoo_id = #{sigoongoo_id} AND Station.sigoongoo_id = Sigoongoo.sigoongoo_id  AND Sigoongoo.special_do_id = Special_sido.special_do_id;
 	</select>
 	<select id="readAddress" resultType="com.db.eccar.model.AddressDTO" parameterType="hashmap">
 		SELECT * FROM Special_sido
 	</select>
 	<select id="readSiggongoo" resultType="com.db.eccar.model.AddressDTO" parameterType="hashmap">
-		SELECT Sigoongoo.sigoongoo_name
+		SELECT Sigoongoo.sigoongoo_name, Sigoongoo.sigoongoo_id
 		FROM Sigoongoo
 		WHERE special_do_id = #{id}
 	</select>

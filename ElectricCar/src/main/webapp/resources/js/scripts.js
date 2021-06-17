@@ -104,3 +104,31 @@ function Sigoongoo_id() {
   var x = document.getElementById("input_special_do_id").value;
   document.getElementById("demo").innerHTML = "You selected: " + x;	
 }*/
+
+function findCharger_id() {	
+	//$('#findCharger').val()
+	//var special_do_id = $('#findCharger').val();
+  var special_do_id = document.getElementById("input_special_do_id").value;
+  var sigoongoo_id = document.getElementById("input_sigoongoo_id").value;
+  //document.getElementById("demo").innerHTML = "You selected: " + x;	
+	
+		$.ajax({
+			url : "./charger/chargerContent",
+			type : "POST",
+			async : false,
+			data : {
+				special_do_id: special_do_id,
+				sigoongoo_id: sigoongoo_id
+			},
+			success : function(data) {
+				console.log(data)
+				$('#charger').html(data);
+				console.log($('#charger').html());				
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n"
+						+ "message:" + request.responseText + "\n"
+						+ "error:" + error);
+			}
+		});
+}

@@ -7,7 +7,7 @@ import com.db.eccar.model.StationDTO;
 
 public interface ChargerService {
 
-	public List<StationDTO> readCharger();
+	public List<StationDTO> readCharger(int sigoongoo_id);
 	public List<AddressDTO> readAddress();
 	public List<AddressDTO> readSiggongoo(int id);
 	
