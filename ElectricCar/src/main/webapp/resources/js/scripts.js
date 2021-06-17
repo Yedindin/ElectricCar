@@ -132,3 +132,34 @@ function findCharger_id() {
 			}
 		});
 }
+
+function findResult_id() {	
+	//$('#findCharger').val()
+	//var special_do_id = $('#findCharger').val();
+  var brand = document.getElementById("brand").value;
+  var price = document.getElementById("price").value;
+  var subsidy_yn = document.getElementById("subsidy_yn").value;
+  var input_sigoongoo_id = document.getElementById("input_sigoongoo_id").value;
+  
+		$.ajax({
+			url : "./search/result",
+			type : "POST",
+			async : false,
+			data : {
+				brand: brand,
+				price: price,
+				subsidy_yn: subsidy_yn, 
+				input_sigoongoo_id: input_sigoongoo_id
+			},
+			success : function(data) {
+				console.log(data)
+				$('#result_car').html(data);
+				console.log($('#result_car').html());				
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n"
+						+ "message:" + request.responseText + "\n"
+						+ "error:" + error);
+			}
+		});
+}

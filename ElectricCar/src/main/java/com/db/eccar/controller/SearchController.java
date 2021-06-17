@@ -11,18 +11,21 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.db.eccar.service.ChargerService;
 import com.db.eccar.service.EcCarService;
+import com.db.eccar.service.SearchService;
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
-@RequestMapping(value = "/search")
+@RequestMapping(value = "/search", method = RequestMethod.POST)
 public class SearchController {
 	
 	@Autowired
 	EcCarService EcCarService;
 	@Autowired
 	ChargerService ChargerService;
+	@Autowired
+	SearchService searchService;
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ModelAndView readSearch(ModelAndView mv) {
@@ -39,5 +42,22 @@ public class SearchController {
 		System.out.println("받아오는 id" + id);
 		mv.setViewName("ajaxContent/sigoongooContent");
 		return mv;	
+	}
+	
+	@RequestMapping(value = "/result", method = RequestMethod.GET)
+	public ModelAndView readResult(ModelAndView mv,
+			@RequestParam(value = "brand", defaultValue = "") String brand,
+			@RequestParam(value = "price", defaultValue = "") int price,
+			@RequestParam(value = "subsidy_yn", defaultValue = "") String subsidy_yn,
+			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id) {
+		mv.addObject("result", searchService.readSearch());
+		System.out.println(mv);
+		System.out.println("brand: " + brand);
+		System.out.println("price: " + price);
+		System.out.println("subsidy_yn: " + subsidy_yn);
+		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
+
+		mv.setViewName("ajaxContent/resultContent");
+		return mv;
 	}
 }

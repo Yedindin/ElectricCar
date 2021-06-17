@@ -60,21 +60,15 @@
                                 <i class="fas fa-building text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">브랜드명</h4>
                                 <div class="btn-group">
-									  <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" style = "background-color: rgba(0, 0, 0, 0.5) !important;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    브랜드를 선택하세요
-									  </button> -->
-									  <!-- <div class="dropdown-menu"> -->
 									  <div class="input-group-prepend">
-									    <label class="input-group-text" for="inputGroupSelect01">브랜드</label>
+									    	<label class="input-group-text" for="inputGroupSelect01">브랜드</label>
 									  </div>
-									  <select class="custom-select" id = "brand" onchange = " ">
-									 	 <option selected>Choose...</option>	
-										   <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<%-- <a class="dropdown-item" href="#">${brand.brand_name}</a> --%>
-									    		<option value="${brand.brand_name}">${brand.brand_name}</option>
-									    </c:forEach>
-									    </select>							
-									  <!-- </div> -->
+									  <select class="custom-select" id = "brand">
+									 	 	<option selected>Choose...</option>	
+										    <c:forEach items="${brand}" var="brand" varStatus="status">
+									    	<option value="${brand.brand_name}">${brand.brand_name}</option>
+									    	</c:forEach>
+									  </select>							
 								</div>
                             </div>
                         </div>
@@ -88,20 +82,7 @@
 									  <div class="input-group-prepend">
 									    <label class="input-group-text" for="inputGroupSelect01">가격대</label>
 									  </div>
-									 <!--  <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">0 ~ 1000</a>
-										    <a class="dropdown-item" href="#">1000 ~ 2000</a>
-										    <a class="dropdown-item" href="#">2000 ~ 3000</a>
-										    <a class="dropdown-item" href="#">3000 ~ 4000</a>
-										    <a class="dropdown-item" href="#">4000 ~ 5000</a>
-										    <a class="dropdown-item" href="#">5000 ~ 6000</a>
-										    <a class="dropdown-item" href="#">6000 ~ 7000</a>
-										    <a class="dropdown-item" href="#">7000 ~ 8000</a>
-										 	<a class="dropdown-item" href="#">8000 ~ 9000</a>
-										 	<a class="dropdown-item" href="#">9000 ~ 10000</a>
-										 	<a class="dropdown-item" href="#">1억 이상</a>		
-										 </div> -->
-										 	<select class="custom-select" id = "input_price" onchange = " ">	
+										 	<select class="custom-select" id = "price">	
 										 		<option selected>Choose...</option>
 										 		<option value="0">0 ~ 1000</option>
 										 		<option value="1000">1000 ~ 2000</option>		
@@ -113,9 +94,7 @@
 										 		<option value="8000">8000 ~ 1000</option>		
 										 		<option value="9000">9000 ~ 1000</option>		
 										 		<option value="10000">1억 이상</option>		
-										 				
-										 	</select>	
-									  
+										 	</select>  
 								</div>                                
                             </div>
                         </div>
@@ -131,19 +110,10 @@
                                 	<div class="input-group-prepend">	
 									    <label class="input-group-text" for="inputGroupSelect01">지원여부</label>
 									  </div>
-									 <!--  <button class="btn btn-secondary btn-lg dropdown-toggle" 
-									  			style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-									  			type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  지원 여부를 선택하세요.								    
-									  </button> -->
-									  <!-- <div class="dropdown-menu">
-										    <a class="dropdown-item" href="#">지원 가능</a>
-										    <a class="dropdown-item" href="#">상관 없음</a>	
-									  </div> -->
-									  <select class="custom-select" id = "subsidy_yn" onchange = " ">	
+									  <select class="custom-select" id = "subsidy_yn">	
 									  			<option selected>Choose...</option>
-										 		<option value="y">지원 가능</option>
-										 		<option value="n">상관 없음</option>
+										 		<option value="1">지원 가능</option>
+										 		<option value="0">상관 없음</option>
 									</select>
 								</div>                                
                             </div>
@@ -152,28 +122,6 @@
                     
                     <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
-                            <%--  <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0 btn-title">거주 지역</h4>
-                                 <div class="btn-group">
-									<div class="input-group-prepend">	
-									    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
-									  </div>
-								<select class="custom-select" id="input_special_do_id"
-									onchange="findSigoongoo_id_test()">
-									<option selected>Choose...</option>
-									<c:forEach items="${address}" var="address">
-										<option value="${address.special_do_id}">${address.special_do_name}</option>
-									</c:forEach>
-								</select>
-								<p id="demo"></p>
-								<div class="col-6" id="sigoongoo">
-									<%@ include file="./ajaxContent/sigoongooContent.jsp"%>
-								</div>
-							</div>                                  
-                            </div>  --%>
-                            
-                            
                              <div class="card-body text-center">
                             	<i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">거주 지역</h4>
@@ -204,11 +152,16 @@
                 </div>                    
                 
                 <div class="text-center" style = "padding-top: 5%;">
-                	<a class="btn btn-primary js-scroll-trigger" onclick = "location.href='./result'">Pick your car NOW</a>
+                	<a class="btn btn-primary js-scroll-trigger" onclick = "findResult_id()">Pick your car NOW</a>
                 </div>
             </div>
-        </section>        
- 
+        </section>  
+              
+        <!-- Result Card -->
+		<div id="result_car">
+			<%@ include file="./ajaxContent/resultContent.jsp"%> 
+		</div>  
+		 
         <!-- Footer-->
        <footer class="footer bg-black small text-center text-white-50">
        <div class="container">
