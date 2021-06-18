@@ -136,8 +136,11 @@ function findCharger_id() {
 function findResult_id() {	
 	//$('#findCharger').val()
 	//var special_do_id = $('#findCharger').val();
-  var brand = document.getElementById("brand").value;
-  var price = document.getElementById("price").value;
+  var brand_first = document.getElementById("brand_first").value;
+  var brand_second = document.getElementById("brand_second").value;
+  var carType = document.getElementById("carType").value;  
+  var minprice = document.getElementById("minprice").value;
+  var maxprice = document.getElementById("maxprice").value;
   var subsidy_yn = document.getElementById("subsidy_yn").value;
   var input_sigoongoo_id = document.getElementById("input_sigoongoo_id").value;
   
@@ -146,8 +149,11 @@ function findResult_id() {
 			type : "POST",
 			async : false,
 			data : {
-				brand: brand,
-				price: price,
+				brand_first: brand_first,
+				brand_second: brand_second,
+				carType: carType,
+				maxprice: maxprice,
+				minprice: minprice,
 				subsidy_yn: subsidy_yn, 
 				input_sigoongoo_id: input_sigoongoo_id
 			},

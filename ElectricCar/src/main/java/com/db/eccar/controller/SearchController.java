@@ -46,17 +46,23 @@ public class SearchController {
 	
 	@RequestMapping(value = "/result", method = RequestMethod.GET)
 	public ModelAndView readResult(ModelAndView mv,
-			@RequestParam(value = "brand", defaultValue = "") String brand,
-			@RequestParam(value = "price", defaultValue = "") int price,
+			@RequestParam(value = "brand_first", defaultValue = "") int brand_first_id,
+			@RequestParam(value = "brand_second", defaultValue = "") int brand_second_id,
+			@RequestParam(value = "carType", defaultValue = "") int carType,
+			@RequestParam(value = "maxprice", defaultValue = "") int maxprice,
+			@RequestParam(value = "minprice", defaultValue = "") int minprice,
 			@RequestParam(value = "subsidy_yn", defaultValue = "") String subsidy_yn,
 			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id) {
-		mv.addObject("result", searchService.readSearch());
-		System.out.println(mv);
-		System.out.println("brand: " + brand);
-		System.out.println("price: " + price);
+		mv.addObject("result", searchService.readSearch(brand_first_id, brand_second_id, carType, maxprice, minprice, subsidy_yn, input_sigoongoo_id));
+		System.out.println("brand_first: " + brand_first_id);
+		System.out.println("brand_second: " + brand_second_id);
+		System.out.println("carType: " + carType);		
+		System.out.println("maxprice: " + maxprice);
+		System.out.println("minprice: " + minprice);
 		System.out.println("subsidy_yn: " + subsidy_yn);
 		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
-
+		System.out.println(mv);
+		
 		mv.setViewName("ajaxContent/resultContent");
 		return mv;
 	}

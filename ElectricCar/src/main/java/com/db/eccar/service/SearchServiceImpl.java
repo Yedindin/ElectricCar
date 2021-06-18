@@ -15,9 +15,9 @@ public class SearchServiceImpl implements SearchService{
 	SearchDAO SearchDAO;
 	
 	@Override
-	public List<SearchDTO> readSearch() {
+	public List<SearchDTO> readSearch(int brand_first_id, int brand_second_id, int carType, int maxprice, int minprice, String subsidy_yn, int input_sigoongoo_id) {
 		
-		List<SearchDTO> result = SearchDAO.readSearch();
+		List<SearchDTO> result = SearchDAO.readSearch(brand_first_id, brand_second_id, carType, maxprice, minprice, subsidy_yn, input_sigoongoo_id);
 		
 		return result;
 		

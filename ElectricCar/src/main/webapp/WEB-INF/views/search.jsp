@@ -64,10 +64,10 @@
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 1</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select" id = "brand_first">
 									 	 	<option selected>Choose...</option>	
 										    <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<option id="brand1" value="${brand.brand_name}">${brand.brand_name}</option>
+									    	<option id="brand1" value="${brand.brand_id}">${brand.brand_name}</option>
 									    	</c:forEach>
 									  </select>							
 								</div>
@@ -83,10 +83,10 @@
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 2</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select" id = "brand_second">
 									 	 	<option selected>Choose...</option>	
 										    <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<option id="brand2" value="${brand.brand_name}">${brand.brand_name}</option>
+									    	<option id="brand2" value="${brand.brand_id}">${brand.brand_name}</option>
 									    	</c:forEach>
 									  </select>							
 								</div>
@@ -104,7 +104,7 @@
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">차종</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select" id = "carType">
 									 	 	<option selected>Choose...</option>	
 									    	<option value="0">소형차</option>
 									    	<option value="1">승용차</option>
@@ -211,7 +211,7 @@
                 </div>                    
                 
                 <div class="text-center" style = "padding-top: 5%;">
-                	<a class="btn btn-primary js-scroll-trigger" onclick = "findResult_id()">Pick your car NOW</a>
+                	<a class="btn btn-primary js-scroll-trigger" onclick = "findResult_id()" href="#result_car">Pick your car NOW</a>
                 </div>
             </div>
         </section>  

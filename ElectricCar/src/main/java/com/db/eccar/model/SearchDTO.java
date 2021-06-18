@@ -1,6 +1,7 @@
 package com.db.eccar.model;
 
 public class SearchDTO {
+
 	String picture;
 	String car_name;
 	String model_name;
@@ -11,6 +12,15 @@ public class SearchDTO {
 	float km_kwh;
 	int power_kw;
 	int amount;
+	int brand_first_id;
+	int brand_second_id;
+	String brand_first;
+	String brand_second;
+	int maxprice;
+	int minprice;
+	String subsidy_yn;
+	int input_sigoongoo_id;
+
 	public String getPicture() {
 		return picture;
 	}
@@ -71,11 +81,49 @@ public class SearchDTO {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+	public String getBrand_first() {
+		return brand_first;
+	}
+	public void setBrand_first(String brand_first) {
+		this.brand_first = brand_first;
+	}
+	public String getBrand_second() {
+		return brand_second;
+	}
+	public void setBrand_second(String brand_second) {
+		this.brand_second = brand_second;
+	}
+	public int getMaxprice() {
+		return maxprice;
+	}
+	public void setMaxprice(int maxprice) {
+		this.maxprice = maxprice;
+	}
+	public int getMinprice() {
+		return minprice;
+	}
+	public void setMinprice(int minprice) {
+		this.minprice = minprice;
+	}
+	public String getSubsidy_yn() {
+		return subsidy_yn;
+	}
+	public void setSubsidy_yn(String subsidy_yn) {
+		this.subsidy_yn = subsidy_yn;
+	}
+	public int getInput_sigoongoo_id() {
+		return input_sigoongoo_id;
+	}
+	public void setInput_sigoongoo_id(int input_sigoongoo_id) {
+		this.input_sigoongoo_id = input_sigoongoo_id;
+	}
 	@Override
 	public String toString() {
 		return "SearchDTO [picture=" + picture + ", car_name=" + car_name + ", model_name=" + model_name + ", price="
 				+ price + ", zero_to_hundred=" + zero_to_hundred + ", max_mileage=" + max_mileage + ", car_type="
-				+ car_type + ", km_kwh=" + km_kwh + ", power_kw=" + power_kw + ", amount=" + amount + "]";
+				+ car_type + ", km_kwh=" + km_kwh + ", power_kw=" + power_kw + ", amount=" + amount + ", brand_first="
+				+ brand_first + ", brand_second=" + brand_second + ", maxprice=" + maxprice + ", minprice=" + minprice
+				+ ", subsidy_yn=" + subsidy_yn + ", input_sigoongoo_id=" + input_sigoongoo_id + "]";
 	}
 	
 }
