@@ -6,11 +6,31 @@
 	<select id="readRecomInfo" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
 		SELECT *
 		FROM Post_Category	
+		order by post_id
  	</select>
  	
  	<select id="readCategory" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
 		SELECT category_id, category_name FROM electric_car.Category;
  	</select>
  	
+ 	<select id="readPost" resultType="com.db.eccar.model.RecomInfoDTO" parameterType="hashmap">
+		SELECT *
+		FROM Post_Category
+		where post_id = #{post_id}
+ 	</select>
+ 	
+ 	<update id="updatePost">
+ 		UPDATE Post
+		SET
+		title=#{title},
+		url=#{url},
+		content=#{content},
+		category_id=#{category_id}
+		WHERE post_id=#{post_id}
+ 	</update>
+ 	
+ 	<delete id="deletePost" >
+ 		DELETE FROM Post where post_id = #{post_id} ;
+ 	</delete>
 
  </mapper>

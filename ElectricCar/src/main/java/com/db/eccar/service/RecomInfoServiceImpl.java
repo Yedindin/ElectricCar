@@ -29,4 +29,21 @@ public class RecomInfoServiceImpl implements RecomInfoService{
 		
 		return result;
 	}
+	
+	@Override
+	public RecomInfoDTO readPost(int post_id) {
+		RecomInfoDTO post = RecomInfoDAO.readPost(post_id);
+		
+		return post;
+	}
+	
+	@Override
+	public int updatePost(RecomInfoDTO dto) {
+		return RecomInfoDAO.updatePost(dto);
+	}
+	
+	@Override
+	public int deletePost(int post_id) {
+		return RecomInfoDAO.deletePost(post_id);
+	}
 }
