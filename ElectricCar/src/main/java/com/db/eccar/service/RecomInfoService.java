@@ -10,6 +10,10 @@ public interface RecomInfoService {
 	
 	public List<RecomInfoDTO> readCategory();
 	
+	public List<RecomInfoDTO> createRecomInfo(int category_id, String title, String url, String content);
+
+	public void createNewRecomInfo(RecomInfoDTO info);
+	
 	public RecomInfoDTO readPost(int post_id);
 	
 	public int updatePost(RecomInfoDTO dto);
