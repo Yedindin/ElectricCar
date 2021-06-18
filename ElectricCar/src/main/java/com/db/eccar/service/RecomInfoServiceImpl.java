@@ -29,4 +29,16 @@ public class RecomInfoServiceImpl implements RecomInfoService{
 		
 		return result;
 	}
+	@Override
+	public List<RecomInfoDTO> createRecomInfo(int category_id, String title, String url, String content){
+		
+		List<RecomInfoDTO> result = RecomInfoDAO.createRecomInfo(category_id, title, url, content);
+		
+		return result;
+	}
+	@Override
+	public void createNewRecomInfo(RecomInfoDTO info) {
+		RecomInfoDAO.createNewRecomInfo(info);
+	}	
+
 }

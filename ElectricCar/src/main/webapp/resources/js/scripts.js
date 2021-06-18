@@ -179,3 +179,45 @@ $(document).ready(function() {
 		});
 
 })
+
+
+function writeReview() {	
+
+  var category_id = document.getElementById("category_id").value;
+  var title = document.getElementById("title").value;
+  var url = document.getElementById("url").value;  
+  var content = document.getElementById("content").value;
+  
+		$.ajax({
+			url : "./recomInfo/recomInfoContent",
+			type : "POST",
+			async : false,
+			data : {
+				category_id: category_id,
+				title: title,
+				url: url,
+				content: content,
+			},
+			success : function(data) {
+				console.log(data)
+				$('#recomInfoResult').html(data);
+				console.log($('#recomInfoResult').html());				
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n"
+						+ "message:" + request.responseText + "\n"
+						+ "error:" + error);
+			}
+		});
+}
+$(document).ready(function() {
+
+		$('#writeReview').click(function() {
+			if ($("#writeRecomInfo").css("display") == "none") {
+				$("div#writeRecomInfo").show();
+			} else {
+				$("div#writeRecomInfo").hide();
+			}
+		});
+
+})

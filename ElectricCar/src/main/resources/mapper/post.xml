@@ -12,5 +12,14 @@
 		SELECT category_id, category_name FROM electric_car.Category;
  	</select>
  	
+ 	<insert id="createRecomInfo" parameterType="com.db.eccar.model.RecomInfoDTO">
+	INSERT INTO Post (category_id, url, content ,title) 
+	VALUES (#{category_id}, #{url}, #{content}, #{title})
 
+ 	</insert> 
+ 	
+<!--  	<insert id="createRecomInfo" parameterType="com.db.eccar.model.RecomInfoDTO">
+	INSERT INTO
+	Contents(content) VALUES (#{content})	
+	</insert> -->
  </mapper>

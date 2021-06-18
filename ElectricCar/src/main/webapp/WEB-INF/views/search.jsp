@@ -180,7 +180,6 @@
 							  </c:forEach>								
 							  </select>
 							</div>
-							<p id="demo"></p>
 							<div class="col-6" id="sigoongoo">
 								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
 							</div>
