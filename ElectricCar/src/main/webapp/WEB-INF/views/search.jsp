@@ -5,6 +5,7 @@
 
 
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -58,16 +59,57 @@
                         <div class="card py-4 h-100" style = "border-radius: 2rem;">
                             <div class="card-body text-center">
                                 <i class="fas fa-building text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0 btn-title">브랜드명</h4>
+                                <h4 class="text-uppercase m-0 btn-title">브랜드명 1</h4>
                                 <div class="btn-group">
 									  <div class="input-group-prepend">
-									    	<label class="input-group-text" for="inputGroupSelect01">브랜드</label>
+									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 1</label>
 									  </div>
 									  <select class="custom-select" id = "brand">
 									 	 	<option selected>Choose...</option>	
 										    <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<option value="${brand.brand_name}">${brand.brand_name}</option>
+									    	<option id="brand1" value="${brand.brand_name}">${brand.brand_name}</option>
 									    	</c:forEach>
+									  </select>							
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-building text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0 btn-title">브랜드명 2</h4>
+                                <div class="btn-group">
+									  <div class="input-group-prepend">
+									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 2</label>
+									  </div>
+									  <select class="custom-select" id = "brand">
+									 	 	<option selected>Choose...</option>	
+										    <c:forEach items="${brand}" var="brand" varStatus="status">
+									    	<option id="brand2" value="${brand.brand_name}">${brand.brand_name}</option>
+									    	</c:forEach>
+									  </select>							
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row" style = "padding-top: 20px;">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="card py-4 h-100" style = "border-radius: 2rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-car text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0 btn-title">차종</h4>
+                                <div class="btn-group">
+									  <div class="input-group-prepend">
+									    	<label class="input-group-text" for="inputGroupSelect01">차종</label>
+									  </div>
+									  <select class="custom-select" id = "brand">
+									 	 	<option selected>Choose...</option>	
+									    	<option value="0">소형차</option>
+									    	<option value="1">승용차</option>
+									    	<option value="2">화물차</option>
+									    	
 									  </select>							
 								</div>
                             </div>
@@ -79,10 +121,10 @@
                                 <i class="fas fa-dollar-sign text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">가격</h4>
                                 <div class="btn-group">
-									  <div class="input-group-prepend">
+									 <!--  <div class="input-group-prepend">
 									    <label class="input-group-text" for="inputGroupSelect01">가격대</label>
-									  </div>
-										 	<select class="custom-select" id = "price">	
+									  </div> -->
+										 	<!-- <select class="custom-select" id = "price">	
 										 		<option selected>Choose...</option>
 										 		<option value="0">0 ~ 1000</option>
 										 		<option value="1000">1000 ~ 2000</option>		
@@ -94,8 +136,25 @@
 										 		<option value="8000">8000 ~ 1000</option>		
 										 		<option value="9000">9000 ~ 1000</option>		
 										 		<option value="10000">1억 이상</option>		
-										 	</select>  
-								</div>                                
+										 	</select> -->
+								<div style="display: flex; ">
+									<div class="input-group mb-3 text-center" style="justify-content: center;">
+										<div class="input-group-prepend" style="margin-left: 1.0rem;">
+											<label class="input-group-text" for="inputGroupSelect01">최소가격</label>
+										</div>
+										<input id="minprice" name="minprice" type="number"
+											class="validate col-2" style="border: 1px solid #ced4da;"
+											placeholder="만 원" required /> 
+											<span style="padding: 5px; margin-left:5px; margin-right:0;"> ~ </span>
+										<div class="input-group-prepend" style="margin-left: 1.0rem;">
+											<label class="input-group-text" for="inputGroupSelect01">최대가격</label>
+										</div>
+										<input id="maxprice" name="maxprice"  type="number"
+											class="validate col-2" style="border: 1px solid #ced4da;"
+											placeholder="만 원" required />
+									</div>
+								</div>
+							</div>                                
                             </div>
                         </div>
                     </div>
