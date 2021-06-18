@@ -169,3 +169,13 @@ function findResult_id() {
 			}
 		});
 }
+
+$(document).ready(function() {
+
+		$('#result_btn').click(function() {
+			if ($("#result_car").css("display") == "none") {
+				$("div#result_car").show();
+			}
+		});
+
+})

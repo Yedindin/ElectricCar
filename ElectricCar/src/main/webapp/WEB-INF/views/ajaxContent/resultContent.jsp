@@ -20,7 +20,7 @@
 				  
 				  	<div class="row" style = "justify-content: center">
 				  	
-						<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around padding-left: 0.3rem;">
+						<div class="col-3 card-img" style = "display: flex; flex-direction: column; justify-content: space-around !important; padding-left: 0.3rem;">
 				    		
 				    		<img src="${result.picture}" alt="" />			             	
 				 		</div>
@@ -28,8 +28,9 @@
 				        <div class="btn-group">
 							<button class="btn btn-secondary btn-lg \" 
 							style = "background-color: rgba(0, 0, 0, 0.5) !important;" 
-							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  		<h5>${result.car_name}(${result.model_name})</h5>		    
+							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick = "location.href = '${result.homepage_url}'" formtarget="_blank" >
+						  		<p>[${result.brand_name}]</p>						  		
+						  		<h6>${result.car_name}(${result.model_name})</h6>		    
 						    </button>		
 						</div>
 					</div> 

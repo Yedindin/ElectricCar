@@ -20,6 +20,9 @@ public class SearchDTO {
 	int minprice;
 	String subsidy_yn;
 	int input_sigoongoo_id;
+	String homepage_url;
+	String AS_number;
+	String brand_name;
 
 	public String getPicture() {
 		return picture;
@@ -117,13 +120,45 @@ public class SearchDTO {
 	public void setInput_sigoongoo_id(int input_sigoongoo_id) {
 		this.input_sigoongoo_id = input_sigoongoo_id;
 	}
+	public int getBrand_first_id() {
+		return brand_first_id;
+	}
+	public void setBrand_first_id(int brand_first_id) {
+		this.brand_first_id = brand_first_id;
+	}
+	public int getBrand_second_id() {
+		return brand_second_id;
+	}
+	public void setBrand_second_id(int brand_second_id) {
+		this.brand_second_id = brand_second_id;
+	}
+	public String getHomepage_url() {
+		return homepage_url;
+	}
+	public void setHomepage_url(String homepage_url) {
+		this.homepage_url = homepage_url;
+	}
+	public String getAS_number() {
+		return AS_number;
+	}
+	public void setAS_number(String aS_number) {
+		AS_number = aS_number;
+	}
+	public String getBrand_name() {
+		return brand_name;
+	}
+	public void setBrand_name(String brand_name) {
+		this.brand_name = brand_name;
+	}	
 	@Override
 	public String toString() {
 		return "SearchDTO [picture=" + picture + ", car_name=" + car_name + ", model_name=" + model_name + ", price="
 				+ price + ", zero_to_hundred=" + zero_to_hundred + ", max_mileage=" + max_mileage + ", car_type="
-				+ car_type + ", km_kwh=" + km_kwh + ", power_kw=" + power_kw + ", amount=" + amount + ", brand_first="
+				+ car_type + ", km_kwh=" + km_kwh + ", power_kw=" + power_kw + ", amount=" + amount
+				+ ", brand_first_id=" + brand_first_id + ", brand_second_id=" + brand_second_id + ", brand_first="
 				+ brand_first + ", brand_second=" + brand_second + ", maxprice=" + maxprice + ", minprice=" + minprice
-				+ ", subsidy_yn=" + subsidy_yn + ", input_sigoongoo_id=" + input_sigoongoo_id + "]";
+				+ ", subsidy_yn=" + subsidy_yn + ", input_sigoongoo_id=" + input_sigoongoo_id + ", homepage_url="
+				+ homepage_url + ", AS_number=" + AS_number + ", brand_name=" + brand_name + "]";
 	}
 	
 }
