@@ -197,10 +197,11 @@ $(document).ready(function() {
 		}
 	});
 	
-	//리뷰 작성완료했을때 알림창 뜨도록
+/*	//리뷰 작성완료했을때 알림창 뜨도록
 	$('#findCharger').click(function() {
 			$('html, body').scrollTop( $(document).height() );		
 	});
+*/
 })
 
 
