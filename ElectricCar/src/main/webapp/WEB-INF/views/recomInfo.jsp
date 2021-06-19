@@ -83,7 +83,7 @@
 								<div class="input-group-prepend">
 									<label class="input-group-text" for="inputGroupSelect01">카테고리</label>
 								</div>
-								<select class="custom-select col-2" id="category_id">
+								<select class="custom-select col-2" id="category_id" required>
 									<option selected>Choose...</option>
 									<c:forEach items="${readCategory}" var="readCategory">
 										<option value="${readCategory.category_id}">${readCategory.category_name}</option>
@@ -117,9 +117,9 @@
 							<div class="card-body"
 								style="text-align: right; padding: 0.5rem 1rem;">
 								<div align="right" class="btn-group">
-									<a id="findCharger" class="btn btn-primary js-scroll-trigger"
+									<button id="findCharger" class="btn btn-primary js-scroll-trigger"
 										style="border-radius: 1.5rem; padding: 15px;"
-										onclick="writeReview()">글 등록하기</a>
+										onclick="writeReview()">글 등록하기</button>
 										
 								</div>
 								<div align="right" class="btn-group">
