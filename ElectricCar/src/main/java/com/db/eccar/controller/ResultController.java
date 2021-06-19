@@ -21,7 +21,7 @@ public class ResultController {
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ModelAndView readSearch(ModelAndView mv) {
-		mv.addObject("result", searchService.readSearch());
+		//mv.addObject("result", searchService.readSearch());
 		System.out.println(mv);
 		mv.setViewName("result");
 		return mv;
@@ -33,7 +33,7 @@ public class ResultController {
 			@RequestParam(value = "price", defaultValue = "") int price,
 			@RequestParam(value = "subsidy_yn", defaultValue = "") String subsidy_yn,
 			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id) {
-		mv.addObject("result", searchService.readSearch());
+		//mv.addObject("result", searchService.readSearch());
 		System.out.println(mv);
 		System.out.println("brand: " + brand);
 		System.out.println("price: " + price);

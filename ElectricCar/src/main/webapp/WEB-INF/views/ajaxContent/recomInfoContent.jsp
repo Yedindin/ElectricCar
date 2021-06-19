@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <section class="condition-section bg-black">
-	<div class="container bg-black" style='padding: 5rem 0;'>
+	<div class="container bg-black" style='padding: 3rem 0;'>
 		<table class="table text-white bg-black">
 			<tr>
 				<th scope='col' style="display: inline-block; width: 5%;">No.</th>

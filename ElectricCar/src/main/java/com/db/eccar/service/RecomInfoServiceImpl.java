@@ -36,9 +36,14 @@ public class RecomInfoServiceImpl implements RecomInfoService{
 		
 		return result;
 	}
+	@Override	
+	public void createContentTrigger(RecomInfoDTO dto) {
+		RecomInfoDAO.createContentTrigger(dto);
+	}
+	
 	@Override
-	public void createNewRecomInfo(RecomInfoDTO info) {
-		RecomInfoDAO.createNewRecomInfo(info);
+	public void createNewRecomInfo(RecomInfoDTO dto) {
+		RecomInfoDAO.createNewRecomInfo(dto);
 	}	
 
 	

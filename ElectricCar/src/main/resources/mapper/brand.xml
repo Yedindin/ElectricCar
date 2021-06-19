@@ -4,8 +4,7 @@
 <mapper namespace="Brand">
 
 	<select id="readBrand" resultType="com.db.eccar.model.EccarDTO" parameterType="hashmap">
-		SELECT brand_name
-		FROM Brands;
+		SELECT * FROM Brands;
  	</select>
 
  </mapper>
