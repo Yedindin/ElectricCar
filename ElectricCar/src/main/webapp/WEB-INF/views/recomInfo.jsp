@@ -53,9 +53,22 @@
 			</div>
 		</div>
 	</section>
+	
+	<section class="condition-section bg-black">
+		<div class="container">
+			<div class="row">
+				<div align="right" class="btn-group">
+					<a id="writeReview" class="btn btn-primary js-scroll-trigger"
+						style="border-radius: 1.5rem; padding: 15px;"
+						>글 작성하기</a>
+				</div>
+			</div>
+		</div>
+	</section>
+		
 	<!-- Contact-->
 	<form>
-		<section class="condition-section bg-black">
+		<section class="condition-section bg-black" id = "writeRecomInfo" style = "display: none">
 			<div class="container">
 				<div class="card w-100" style="border-radius: 2rem;">
 					<div class="row">
@@ -80,23 +93,16 @@
 									<label class="input-group-text" for="inputGroupSelect01">제목</label>
 								</div>
 								<input id="title" name="title" type="text"
-									class="validate col-4" style="border: 1px solid #ced4da;"
+									class="validate col-6" style="border: 1px solid #ced4da;"
 									placeholder="글의 제목을 입력해 주세요." required />
-								<div class="input-group-prepend" style="margin-left: 1.0rem;">
-									<label class="input-group-text" for="inputGroupSelect01">P.W</label>
-								</div>
-								<input id="password" name="password" type="password"
-									class="validate col-auto"
-									style="padding: 0px 0px; border: 1px solid #ced4da;"
-									placeholder=" 비밀번호를 입력해 주세요." required />
 							</div>
 							<div class="card-body"
 								style="display: flex; padding: 0.5rem 1rem;">
 								<div class="input-group-prepend">
 									<label class="input-group-text" for="inputGroupSelect01">URL</label>
 								</div>
-								<input id="url" name="url" type="text"
-									class="validate col" style="border: 1px solid #ced4da;"
+								<input id="url" name="url" type="text" class="validate col"
+									style="border: 1px solid #ced4da;"
 									placeholder="해당 정보의 출처 URL을 입력해 주세요." required />
 							</div>
 							<div class="card-body"
@@ -113,7 +119,7 @@
 								<div align="right" class="btn-group">
 									<a id="findCharger" class="btn btn-primary js-scroll-trigger"
 										style="border-radius: 1.5rem; padding: 15px;"
-										onclick="findCharger_id()">글 작성하기</a>
+										onclick="writeReview()">글 작성하기</a>
 								</div>
 							</div>
 						</div>
@@ -122,53 +128,26 @@
 			</div>
 		</section>
 	</form>
-	<section class="condition-section bg-black" >
-            <div class="container bg-black" style='padding:5rem 0;'>
-			               		<table class="table text-white bg-black" >
-								  	<tr>
-								  		<th scope='col' style = "display: inline-block; width: 5%;">No.</th>	
-										<th scope='col' style = "display: inline-block; width: 10%;">카테고리</th>
-				               			<th scope='col' style = "display: inline-block; width: 22%;">제목</th>
-				               			<th scope='col' style = "display: inline-block; width: 50%;">내용</th>
-				               			<th scope='col' style = "display: inline-block; width: 13%;">등록일</th>
-			               			</tr>
- 								<c:forEach items="${recomInfo}" var="recomInfo" varStatus="status">
-								<fmt:formatDate value="${recomInfo.regdate}" var="dateValue" pattern="yyyy-MM-dd"/>
-								    <tr>
-								      <td style = "display: inline-block; width: 5%;">${recomInfo.post_id}</td>
-								      <td style = "display: inline-block; width: 10%;">${recomInfo.category_name}</td>
-								      <td style = "display: inline-block; width: 22%;"><a href="${recomInfo.url}" target='_blank'>${recomInfo.title}</a></td>
-								      <td style = "display: inline-block; width: 50%;">${recomInfo.content}</td>
-								      <td style = "display: inline-block; width: 13%;">${dateValue}</td>
-								    </tr>			               					               		
-			               		</c:forEach>
-<!-- 			               			
-								    <tr>
-								      <td>사용후기</td><td><a href="#about">누구누구의 리뷰</a></td>
-								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-04</td>
-								    </tr>
-								    <tr>
-								      <td>전문가리뷰</td><td>전문가 누구누구의 리뷰</td>
-								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-05</td>
-								    </tr>
-								    <tr>
-								      <td>기타</td><td>무슨무슨차에 관련된 기사</td>
-								      <td>어어떤어떤어어떤 내용입니다.</td><td>2021-06-06</td>
-								    </tr> -->
-								</table>
-		                	</div>
-		              	
-        </section>        
+	
+	<div id="recomInfoResult">
+		<%@ include file="./ajaxContent/recomInfoContent.jsp"%>
+	</div>     
 
-		<footer class="footer bg-black small text-center text-white-50"><div class="container">
-        
-        Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="./resources/js/scripts.js"></script>
-    </body>
+	<footer class="footer bg-black small text-center text-white-50">
+		<div class="container">
+
+			Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term
+			Project <br>정보문 홍승훈 김예진 양지후
+		</div>
+	</footer>
+	<!-- Bootstrap core JS-->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Third party plugin JS-->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="./resources/js/scripts.js"></script>
+</body>
 </html>

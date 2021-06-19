@@ -60,14 +60,14 @@
                             <div class="card-body text-center">
                                 <i class="fas fa-building text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">브랜드명 1</h4>
-                                <div class="btn-group">
+                                <div class="btn-group col-9">
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 1</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select" id = "brand_first">
 									 	 	<option selected>Choose...</option>	
 										    <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<option id="brand1" value="${brand.brand_name}">${brand.brand_name}</option>
+									    	<option id="brand1" value="${brand.brand_id}">${brand.brand_name}</option>
 									    	</c:forEach>
 									  </select>							
 								</div>
@@ -79,14 +79,14 @@
                             <div class="card-body text-center">
                                 <i class="fas fa-building text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">브랜드명 2</h4>
-                                <div class="btn-group">
+                                <div class="btn-group col-9">
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">브랜드 2</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select" id = "brand_second">
 									 	 	<option selected>Choose...</option>	
 										    <c:forEach items="${brand}" var="brand" varStatus="status">
-									    	<option id="brand2" value="${brand.brand_name}">${brand.brand_name}</option>
+									    	<option id="brand2" value="${brand.brand_id}">${brand.brand_name}</option>
 									    	</c:forEach>
 									  </select>							
 								</div>
@@ -100,16 +100,15 @@
                             <div class="card-body text-center">
                                 <i class="fas fa-car text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">차종</h4>
-                                <div class="btn-group">
+                                <div class="btn-group col-9">
 									  <div class="input-group-prepend">
 									    	<label class="input-group-text" for="inputGroupSelect01">차종</label>
 									  </div>
-									  <select class="custom-select" id = "brand">
+									  <select class="custom-select " id = "carType">
 									 	 	<option selected>Choose...</option>	
 									    	<option value="0">소형차</option>
 									    	<option value="1">승용차</option>
 									    	<option value="2">화물차</option>
-									    	
 									  </select>							
 								</div>
                             </div>
@@ -121,36 +120,20 @@
                                 <i class="fas fa-dollar-sign text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">가격</h4>
                                 <div class="btn-group">
-									 <!--  <div class="input-group-prepend">
-									    <label class="input-group-text" for="inputGroupSelect01">가격대</label>
-									  </div> -->
-										 	<!-- <select class="custom-select" id = "price">	
-										 		<option selected>Choose...</option>
-										 		<option value="0">0 ~ 1000</option>
-										 		<option value="1000">1000 ~ 2000</option>		
-										 		<option value="2000">2000 ~ 3000</option>		
-										 		<option value="4000">4000 ~ 1000</option>		
-										 		<option value="5000">5000 ~ 1000</option>		
-										 		<option value="6000">6000 ~ 1000</option>		
-										 		<option value="7000">7000 ~ 1000</option>		
-										 		<option value="8000">8000 ~ 1000</option>		
-										 		<option value="9000">9000 ~ 1000</option>		
-										 		<option value="10000">1억 이상</option>		
-										 	</select> -->
 								<div style="display: flex; ">
 									<div class="input-group mb-3 text-center" style="justify-content: center;">
 										<div class="input-group-prepend" style="margin-left: 1.0rem;">
-											<label class="input-group-text" for="inputGroupSelect01">최소가격</label>
+											<label class="input-group-text" for="inputGroupSelect01">최소</label>
 										</div>
 										<input id="minprice" name="minprice" type="number"
-											class="validate col-2" style="border: 1px solid #ced4da;"
+											class="validate col-3" style="border: 1px solid #ced4da;"
 											placeholder="만 원" required /> 
 											<span style="padding: 5px; margin-left:5px; margin-right:0;"> ~ </span>
 										<div class="input-group-prepend" style="margin-left: 1.0rem;">
-											<label class="input-group-text" for="inputGroupSelect01">최대가격</label>
+											<label class="input-group-text" for="inputGroupSelect01">최대</label>
 										</div>
 										<input id="maxprice" name="maxprice"  type="number"
-											class="validate col-2" style="border: 1px solid #ced4da;"
+											class="validate col-3" style="border: 1px solid #ced4da;"
 											placeholder="만 원" required />
 									</div>
 								</div>
@@ -165,7 +148,7 @@
                             <div class="card-body text-center">
                                 <i class="fas fa-wallet text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">보조금 지원 여부</h4>
-                                <div class="btn-group">
+                                <div class="btn-group col-9">
                                 	<div class="input-group-prepend">	
 									    <label class="input-group-text" for="inputGroupSelect01">지원여부</label>
 									  </div>
@@ -184,9 +167,9 @@
                              <div class="card-body text-center">
                             	<i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">거주 지역</h4>
-	                    	<div class="btn-group">
+	                    	<div class="btn-group col-12">
 		             	<div style = "display: flex; ">
-							<div class="input-group mb-3 col-6">
+							<div class="input-group mb-3 ">
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
 							  </div>
@@ -196,9 +179,7 @@
 								<option value="${address.special_do_id}">${address.special_do_name}</option>
 							  </c:forEach>								
 							  </select>
-							  
 							</div>
-							<p id="demo"></p>
 							<div class="col-6" id="sigoongoo">
 								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
 							</div>
@@ -211,13 +192,13 @@
                 </div>                    
                 
                 <div class="text-center" style = "padding-top: 5%;">
-                	<a class="btn btn-primary js-scroll-trigger" onclick = "findResult_id()">Pick your car NOW</a>
+                	<a class="btn btn-primary js-scroll-trigger" id = "result_btn" href="#result_car" onclick = "findResult_id()" >Pick your car NOW</a>
                 </div>
             </div>
         </section>  
               
         <!-- Result Card -->
-		<div id="result_car">
+		<div id="result_car" style = "display: none">
 			<%@ include file="./ajaxContent/resultContent.jsp"%> 
 		</div>  
 		 

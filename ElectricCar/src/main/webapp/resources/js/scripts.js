@@ -136,8 +136,11 @@ function findCharger_id() {
 function findResult_id() {	
 	//$('#findCharger').val()
 	//var special_do_id = $('#findCharger').val();
-  var brand = document.getElementById("brand").value;
-  var price = document.getElementById("price").value;
+  var brand_first = document.getElementById("brand_first").value;
+  var brand_second = document.getElementById("brand_second").value;
+  var carType = document.getElementById("carType").value;  
+  var minprice = document.getElementById("minprice").value;
+  var maxprice = document.getElementById("maxprice").value;
   var subsidy_yn = document.getElementById("subsidy_yn").value;
   var input_sigoongoo_id = document.getElementById("input_sigoongoo_id").value;
   
@@ -146,8 +149,11 @@ function findResult_id() {
 			type : "POST",
 			async : false,
 			data : {
-				brand: brand,
-				price: price,
+				brand_first: brand_first,
+				brand_second: brand_second,
+				carType: carType,
+				maxprice: maxprice,
+				minprice: minprice,
 				subsidy_yn: subsidy_yn, 
 				input_sigoongoo_id: input_sigoongoo_id
 			},
@@ -163,3 +169,55 @@ function findResult_id() {
 			}
 		});
 }
+
+$(document).ready(function() {
+
+		$('#result_btn').click(function() {
+			if ($("#result_car").css("display") == "none") {
+				$("div#result_car").show();
+			}
+		});
+
+})
+
+
+function writeReview() {	
+
+  var category_id = document.getElementById("category_id").value;
+  var title = document.getElementById("title").value;
+  var url = document.getElementById("url").value;  
+  var content = document.getElementById("content").value;
+  
+		$.ajax({
+			url : "./recomInfo/recomInfoContent",
+			type : "POST",
+			async : false,
+			data : {
+				category_id: category_id,
+				title: title,
+				url: url,
+				content: content,
+			},
+			success : function(data) {
+				console.log(data)
+				$('#recomInfoResult').html(data);
+				console.log($('#recomInfoResult').html());				
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n"
+						+ "message:" + request.responseText + "\n"
+						+ "error:" + error);
+			}
+		});
+}
+$(document).ready(function() {
+
+		$('#writeReview').click(function() {
+			if ($("#writeRecomInfo").css("display") == "none") {
+				$("div#writeRecomInfo").show();
+			} else {
+				$("div#writeRecomInfo").hide();
+			}
+		});
+
+})

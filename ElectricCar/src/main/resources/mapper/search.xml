@@ -3,10 +3,27 @@
 
 <mapper namespace="Search">
 
-	<select id="readSearch" resultType="com.db.eccar.model.SearchDTO" parameterType="hashmap">
-		SELECT picture, car_name, model_name, price, zero_to_hundred, max_mileage, car_type, km_kwh, power_kw, <![CDATA[ IF(price < 6000, amount, 0) AS amount]]>
+	<select id="readSearch"
+		resultType="com.db.eccar.model.SearchDTO" parameterType="hashmap">
+
+		WITH NeedSub AS (
+		SELECT picture, car_name, model_name, price, zero_to_hundred, max_mileage,
+		car_type, km_kwh, power_kw, homepage_url, brand_name,
+   <![CDATA[ IF(price < 6000, amount, 0) AS amount]]>
 		FROM charger_view, Subsidy
-		WHERE brand_id = 1 AND price BETWEEN 1000 AND 15000 AND Subsidy.car_size = charger_view.car_type AND Subsidy.sigoongoo_id = 1;     
+		WHERE (brand_id = #{brand_first_id} OR brand_id = #{brand_second_id})
+		AND price BETWEEN #{minprice} AND #{maxprice}
+		AND Subsidy.car_size = charger_view.car_type AND Subsidy.sigoongoo_id =
+		#{input_sigoongoo_id} AND charger_view.car_type = #{car_type}
+		) SELECT * FROM NeedSub
+		WHERE <![CDATA[ price <= calculate(#{subsidy_yn}) ]]>
 	</select>
 
- </mapper>
+	<!-- <select id="readSearch" resultType="com.db.eccar.model.SearchDTO" parameterType="hashmap"> 
+		WITH NeedSub AS ( SELECT picture, car_name, model_name, price, zero_to_hundred, 
+		max_mileage, car_type, km_kwh, power_kw, IF(price < 6000, amount, 0) AS amount 
+		FROM charger_view, Subsidy WHERE (brand_id = 1 OR brand_id = 2) AND price 
+		BETWEEN 1000 AND 15000 AND Subsidy.car_size = charger_view.car_type AND Subsidy.sigoongoo_id 
+		= 1 AND charger_view.car_type = 1 ) SELECT * FROM NeedSub WHERE price <= 
+		IF(1 = 1, 5999, (SELECT MAX(price) FROM Model)); </select> -->
+</mapper>
