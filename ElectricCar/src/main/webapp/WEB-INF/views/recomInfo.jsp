@@ -119,8 +119,15 @@
 								<div align="right" class="btn-group">
 									<a id="findCharger" class="btn btn-primary js-scroll-trigger"
 										style="border-radius: 1.5rem; padding: 15px;"
-										onclick="writeReview()">글 작성하기</a>
+										onclick="writeReview()">글 등록하기</a>
+										
 								</div>
+								<div align="right" class="btn-group">
+									<a id="cancleReview" class="btn btn-primary js-scroll-trigger"
+										style="border-radius: 1.5rem; padding: 15px;"
+									>취소하기</a>
+										
+								</div>								
 							</div>
 						</div>
 					</div>
