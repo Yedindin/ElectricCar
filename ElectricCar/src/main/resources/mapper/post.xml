@@ -34,13 +34,13 @@
  	</delete>
 
 	<insert id="createRecomInfo" parameterType="com.db.eccar.model.RecomInfoDTO">
-	INSERT INTO Post (category_id, url, content ,title) 
+	INSERT INTO Post (category_id, url, content, title) 
 	VALUES (#{category_id}, #{url}, #{content}, #{title})
  	</insert> 
  	
-<!--  	<insert id="createRecomInfo" parameterType="com.db.eccar.model.RecomInfoDTO">
-	INSERT INTO
-	Contents(content) VALUES (#{content})	
-	</insert> -->
+  	<insert id="createContentForTrigger" parameterType="com.db.eccar.model.RecomInfoDTO">
+	INSERT INTO Contents (content) 
+	VALUES (#{content})	
+	</insert>
 	
  </mapper>

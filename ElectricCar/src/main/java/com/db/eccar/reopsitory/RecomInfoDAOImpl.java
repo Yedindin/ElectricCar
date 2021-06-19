@@ -60,7 +60,10 @@ public class RecomInfoDAOImpl implements RecomInfoDAO{
 		System.out.println(Categorylist);
 		return Categorylist;
 	}
-	
+	@Override
+	public void createContentTrigger(RecomInfoDTO dto) {
+		sqlSession.insert("Post.createContentForTrigger", dto);
+	}
 	@Override
 	public void createNewRecomInfo(RecomInfoDTO dto){
 		sqlSession.insert("Post.createRecomInfo", dto);

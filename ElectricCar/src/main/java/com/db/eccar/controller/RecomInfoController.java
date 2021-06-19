@@ -52,15 +52,9 @@ public class RecomInfoController {
 		info.toString();
 		
 		recomInfoService.createNewRecomInfo(info);
+		recomInfoService.createContentTrigger(info);
 		
 		mv.addObject("recomInfo", recomInfoService.readRecomInfo());
-
-				
-//		mv.addObject("recomInfo", recomInfoService.readRecomInfo());
-//		mv.addObject("readCategory", recomInfoService.readCategory());
-//		mv.addObject("createCategory", recomInfoService.createRecomInfo(category_id, title, url, content));
-		
-		//System.out.println(mv);
 
 		mv.setViewName("ajaxContent/recomInfoContent");
 		return mv;

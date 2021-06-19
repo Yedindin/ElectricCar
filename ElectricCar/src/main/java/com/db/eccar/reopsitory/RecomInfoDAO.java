@@ -14,8 +14,11 @@ public interface RecomInfoDAO {
 
 	public void createNewRecomInfo(RecomInfoDTO dto);
 	
+	public void createContentTrigger(RecomInfoDTO dto);
+	
 	public int updatePost(RecomInfoDTO dto);
 
 	public int deletePost(int post_id);
+
 	
 }

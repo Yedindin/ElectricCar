@@ -198,12 +198,9 @@ $(document).ready(function() {
 	});
 	
 	//리뷰 작성완료했을때 알림창 뜨도록
-	/*$('#findCharger').click(function() {
-		if ($('#writeRecomInfo').css('display') != 'none') {
-			$("#writeRecomInfo").hide();
-			$("#writeReview").show();	
-		}
-	});	*/
+	$('#findCharger').click(function() {
+			$('html, body').scrollTop( $(document).height() );		
+	});
 })
 
 
@@ -229,9 +226,8 @@ function writeReview() {
 			$('#recomInfoResult').html(data);
 			console.log($('#recomInfoResult').html());
 			alert('글을 등록하였습니다!')
-			$("body").scrollTop($(document).height());
 			$("#writeRecomInfo").hide();
-			
+			$("#writeReview").show();
 		},
 		error: function(request, status, error) {
 			console.log("code:" + request.status + "\n"
