@@ -27,7 +27,9 @@
 		<div class = row style="padding-top: 2rem; padding-bottom: 0.5rem; margin: 0; background-color: black">
 			<c:set var="resultYN" value="${resultYN}" />
 			<c:if test="${ resultYN eq 0 }">
-				<h6 class="text-white-50">조건을 만족하는 전기차가 없습니다.</h6>
+				<div style="padding:5rem 0rem;">
+					<h6 class="text-white-50">조건을 만족하는 전기차가 없습니다.</h6>
+				</div>
 			</c:if>
 		</div>
 		<h6 class="text-white-50 mx-auto mt-2">모델명을 클릭하면 더 자세히 알아볼 수 있습니다.</h6>		
