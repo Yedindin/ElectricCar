@@ -58,12 +58,12 @@
 
 	<header class="masthead">
 		<div class="container h-75">		
-			<div class="row" style = "justify-content: flex-end;">
+			<div class="row" style = "justify-content: flex-end; ">
 				<div class="col-md-6 mb-3 mb-md-0" style="margin-top: 15rem">
 <!-- 					<h2 class="text-white mb-4">Pick Car Chu~&hearts; is...</h2>
  -->					
-						<h2 class="text-white mb-4">Pick Car is...</h2>
- 						<h6 class="text-white mb-4">This application aims to promote
+						<h2 class="mb-4" style="color: #a2a2a2;">Pick Car is...</h2>
+ 						<h6 class="mb-4" style="color: #a2a2a2;">This application aims to promote
 						electric vehicle purchases by integrating and providing vast and
 						scattered information in a situation where the demand and supply
 						of electric vehicles increases, and recommending electric vehicles

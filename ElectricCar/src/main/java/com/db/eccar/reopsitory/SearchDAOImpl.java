@@ -42,6 +42,10 @@ public class SearchDAOImpl implements SearchDAO{
 		List<SearchDTO> searchInfolist = sqlSession.selectList("Search.readSearch", param);
 		System.out.println("result in DAO: " + searchInfolist);
 		
+//		if(searchInfolist.isEmpty()) { //리스트에 값이 존재하지 않을 경우 출력
+//			System.out.println("DAO: search list is empty"); 
+//		}
+
 		return searchInfolist;
 	}
 	

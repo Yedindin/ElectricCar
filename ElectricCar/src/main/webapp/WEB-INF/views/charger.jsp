@@ -135,6 +135,7 @@
 				</div>			
             </div>
         </section>  
+		       
          <div id="charger">
 			<%@ include file="./ajaxContent/chargerContent.jsp"%> 
 		</div>
