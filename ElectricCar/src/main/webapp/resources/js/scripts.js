@@ -193,11 +193,6 @@ $(document).ready(function() {
 		}
 	});
 	
-/*	//리뷰 작성완료했을때 알림창 뜨도록
-	$('#findCharger').click(function() {
-			$('html, body').scrollTop( $(document).height() );		
-	});
-*/
 })
 
 
@@ -225,6 +220,8 @@ function writeReview() {
 			alert('글을 등록하였습니다!')
 			$("#writeRecomInfo").hide();
 			$("#writeReview").show();
+			$("#recomInfoList").scrollTop($(document).height());
+			$("#recomInfoList").scrollTop($("#recomInfoList")[0].scrollHeight);
 		},
 		error: function(request, status, error) {
 			console.log("code:" + request.status + "\n"
