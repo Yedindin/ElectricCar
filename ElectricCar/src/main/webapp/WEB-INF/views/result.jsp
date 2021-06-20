@@ -21,7 +21,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="page-top" class="bg-black">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
