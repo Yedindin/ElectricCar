@@ -72,7 +72,9 @@ public class SearchController {
 		if(result.isEmpty()) { //리스트에 값이 존재하지 않을 경우 출력
 			System.out.println("controller: search list is empty"); 
 			mv.addObject("resultYN", 0);
-		}		
+		} else {
+			mv.addObject("resultYN", 1);
+		}
 		
 		mv.setViewName("ajaxContent/resultContent");
 		return mv;
