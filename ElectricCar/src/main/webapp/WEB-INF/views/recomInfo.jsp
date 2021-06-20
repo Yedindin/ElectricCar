@@ -132,10 +132,10 @@
 							<div class="card-body"
 								style="text-align: right; padding: 0.5rem 1rem;">
 								<div align="right" class="btn-group">
-									<button id="findCharger"
+									<a id="findCharger" href="#btm"
 										class="btn btn-primary js-scroll-trigger"
 										style="border-radius: 1.5rem; padding: 15px;"
-										onclick="writeReview()">글 등록하기</button>
+										onclick="writeReview()">글 등록하기</a>
 
 								</div>
 								<div align="right" class="btn-group">
@@ -154,7 +154,7 @@
 	<div id="recomInfoResult">
 		<%@ include file="./ajaxContent/recomInfoContent.jsp"%>
 	</div>
-	<div class="condition-section bg-black text-right">
+	<div id="btm" class="condition-section bg-black text-right">
 		<div class="container text-right">
 				<div align="right" class="btn-group text-right">
 					<a  
