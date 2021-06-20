@@ -12,11 +12,15 @@
 				결과를 확인하세요.</h6>
 		</div>
 	</div>
-	<div class="container right" style="padding-top: 0.5rem;">
-		<a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
+	<div class="container right " style="padding-top: 0.5rem; color:#65a09d;">
+		<!-- <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
 		<a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    
 		<a id="btnKakao" class="link-icon kakao" href="javascript:sendLink();">카카오톡</a> 
-		<a id="btnAlbum" class="link-icon album" onclick="PrintDiv($('#result_car'));">이미지로 저장</a>
+		<a id="btnAlbum" class="link-icon album" onclick="PrintDiv($('#result_car'));">이미지로 저장</a> -->
+		
+		<i class="far fa-image"></i>
+		<a id="btnAlbum" onclick="PrintDiv($('#result_car'));">이미지로 저장</a>>
+		
 	</div> 
 	
 </section> 
