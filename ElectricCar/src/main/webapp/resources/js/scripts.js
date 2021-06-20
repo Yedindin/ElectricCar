@@ -124,6 +124,7 @@ function findCharger_id() {
 			console.log(data)
 			$('#charger').html(data);
 			console.log($('#charger').html());
+			$("#resultCharger").show();			
 		},
 		error: function(request, status, error) {
 			console.log("code:" + request.status + "\n"
@@ -161,23 +162,18 @@ function findResult_id() {
 			console.log(data)
 			$('#result_car').html(data);
 			console.log($('#result_car').html());
+			$("#result_car").show();
 		},
 		error: function(request, status, error) {
 			console.log("code:" + request.status + "\n"
 				+ "message:" + request.responseText + "\n"
 				+ "error:" + error);
+			alert('조건을 모두 선택해주세요!');
 		}
 	});
 }
 
 $(document).ready(function() {
-
-	//나만의 전기차 찾기 결과 출력 버튼 클릭시 결과 나오도록 
-	$('#result_btn').click(function() {
-		if ($("#result_car").css("display") == "none") {
-			$("div#result_car").show();
-		}
-	});
 
 	//리뷰쓰기 버튼 눌러야 글 작성하기 나오도록
 	$('#writeReview').click(function() {

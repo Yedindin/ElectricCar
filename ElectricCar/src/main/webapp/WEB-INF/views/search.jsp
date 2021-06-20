@@ -55,7 +55,22 @@
 			    }
 			  });
 			}
-		  
+		//이미지(png)로 다운로드
+		  function PrintDiv(div){
+		  	div = div[0]
+		  	html2canvas(div).then(function(canvas){
+		  		var myImage = canvas.toDataURL();
+		  		downloadURI(myImage, "나만의전기차.png") 
+		  	});
+		  }
+
+		  function downloadURI(uri, name){
+		  	var link = document.createElement("a")
+		  	link.download = name;
+		  	link.href = uri;
+		  	document.body.appendChild(link);
+		  	link.click();
+		  }		  
 		</script>        
     </head>
     
@@ -229,7 +244,7 @@
                 </div>                    
                 
                 <div class="text-center" style = "padding-top: 5%;">
-                	<a class="btn btn-primary js-scroll-trigger" id = "result_btn" href="#result_car" onclick = "findResult_id()" >Pick your car NOW</a>
+                	<a class="btn btn-primary js-scroll-trigger" id = "result_btn" onclick = "findResult_id()" href="#result_car">Pick your car NOW</a>
                 </div>
             </div>
         </section>  
@@ -252,5 +267,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
+        <script src="./resources/js/html2canvas.js"></script>        
     </body>
 </html>
