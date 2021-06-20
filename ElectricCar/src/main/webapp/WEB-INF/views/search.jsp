@@ -243,14 +243,17 @@
                     </div>
                 </div>                    
                 
-                <div class="text-center" style = "padding-top: 5%;">
+                <div class="text-center" style = "padding-top: 5%; padding-bottom: 3rem;">
                 	<a class="btn btn-primary js-scroll-trigger" id = "result_btn" onclick = "findResult_id()" href="#result_car">Pick your car NOW</a>
                 </div>
             </div>
         </section>  
-              
+        
+        <div class="text-center" style = "padding-top: 3rem%; padding-bottom: 3rem;">
+        </div>   
+                           
         <!-- Result Card -->
-		<div id="result_car" style = "display: none">
+		<div id="result_car" style = "display: none;">
 			<%@ include file="./ajaxContent/resultContent.jsp"%> 
 		</div>  
 		 

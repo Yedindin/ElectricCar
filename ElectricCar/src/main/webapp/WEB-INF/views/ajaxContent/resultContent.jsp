@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<section class="header-section bg-black" style = "padding-bottom: 0;">
+<section class="header-section bg-black" style = "padding-bottom: 0; min-height: 100%;">
 	<div class="container" style="padding-top: 1rem;">
 		<div>
 			<h4 class="text-white">나만의 전기차</h4>
@@ -29,6 +29,7 @@
 		<c:choose>
 			<c:when test="${ resultYN eq 0 }">
 				<h6 class="text-white-50">조건을 만족하는 전기차가 없습니다.</h6>
+			<div style = "padding: 7rem;"></div>
 			</c:when>
 			<c:otherwise>
 					<h6 class="text-white-50 ">모델명을 클릭하면 더 자세히 알아볼 수 있습니다.</h6>		
