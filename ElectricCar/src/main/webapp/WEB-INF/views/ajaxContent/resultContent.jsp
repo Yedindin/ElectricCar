@@ -12,7 +12,13 @@
 				결과를 확인하세요.</h6>
 		</div>
 	</div>
+	<div class="container" style="padding-top: 0.5rem;">
+		<a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
+		<a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    
+		<a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">카카오톡</a> 
+	</div> 	
 </section>
+ 
 
 <section class="condition-section bg-black">
 	<div class="container" id="result_car">

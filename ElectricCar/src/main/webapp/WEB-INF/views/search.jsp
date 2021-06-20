@@ -21,7 +21,44 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
+  		<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+		<script type="text/javascript">
+		  Kakao.init('e643fe2525cb01a52b0248e47331a218'); // 초기화
+		
+		  function sendLink() { // 카카오톡 공유하기
+		    Kakao.Link.sendDefault({
+		      objectType: 'text',
+		      text: 'Pick Car',
+		      link: {
+		        mobileWebUrl: 'https://pickcarchu.herokuapp.com/search/',
+		        webUrl: 'https://pickcarchu.herokuapp.com/search/',
+		      },
+		    })
+		  }
+		  function shareKakao() {
+			  
+			  // 사용할 앱의 JavaScript 키 설정
+			  Kakao.init('e643fe2525cb01a52b0248e47331a218');
+			 
+			  // 카카오링크 버튼 생성
+			  Kakao.Link.createDefaultButton({
+			    container: '#btnKakao', // 카카오공유버튼ID
+			    objectType: 'feed',
+			    content: {
+			      title: "Pick Car", // 보여질 제목
+			      description: "전기차 추천 서비스", // 보여질 설명
+			      imageUrl: "pickcarchu.herokuapp.com/search/", // 콘텐츠 URL
+			      link: {
+			         mobileWebUrl: "pickcarchu.herokuapp.com/search/",
+			         webUrl: "pickcarchu.herokuapp.com/search/"
+			      }
+			    }
+			  });
+			}
+		  
+		</script>        
     </head>
+    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
