@@ -13,11 +13,13 @@
 				<th scope='col' style="display: inline-block; width: 50%;">내용</th>
 				<th scope='col' style="display: inline-block; width: 13%;">등록일</th>
 			</tr>
+			
 			<c:forEach items="${recomInfo}" var="recomInfo" varStatus="status">
+				<c:set var="post_id" value="${post_id + 1}" />
 				<fmt:formatDate value="${recomInfo.regdate}" var="dateValue"
 					pattern="yyyy-MM-dd" />
 				<tr>
-					<td style="display: inline-block; width: 5%;">${recomInfo.post_id}</td>
+					<td style="display: inline-block; width: 5%;">${post_id }</td>
 					<td style="display: inline-block; width: 10%;">${recomInfo.category_name}</td>
 					<td style="display: inline-block; width: 22%;"><a
 						href="${recomInfo.url}" target='_blank'>${recomInfo.title}</a></td>

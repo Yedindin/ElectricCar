@@ -91,7 +91,6 @@
 									<select class="custom-select col-2" name="category_id" id="category_id">
 										<option value="${post.category_id }"selected>${post.category_name}</option>
 										<c:forEach items="${readCategory}" var="readCategory">
-										
 											<option value="${readCategory.category_id}">${readCategory.category_name}</option>
 										</c:forEach>
 									</select>
