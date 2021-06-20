@@ -10,7 +10,7 @@
 			<c:set var="resultYN" value="${resultYN}" />
  			<c:choose>
  			<c:when test="${ resultYN eq 0 }">
-				<h6 class="text-white-50">해당 지역에는 충전소가 없습니다.</h6>
+				<h6 class="text-white-50">해당 지역의 충전소 정보가 아직 업데이트 되지 않았습니다.</h6>
 			</c:when>
  			<c:otherwise>
 					<table class="table text-white" id = "resultCharger" style = "display: none;">
