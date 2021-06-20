@@ -1,47 +1,62 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page session="false" %>
+<%@ page session="false"%>
 
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>pickCar</title>
-        <link rel="icon" type="image/x-icon" href="./resources/assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="./resources/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" onclick = "location.href='./'"><bold>Pick Car</bold></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./'">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./search'">나만의 전기차</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./recomInfo'">추천 정보</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./app'">추천 어플</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick = "location.href='./charger'">내 주변 충전소</a></li>    
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>pickCar</title>
+<link rel="icon" type="image/x-icon"
+	href="./resources/assets/img/favicon.ico" />
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+	crossorigin="anonymous"></script>
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="./resources/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger"
+				onclick="location.href='./'"><bold>Pick Car</bold></a>
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						onclick="location.href='./'">Home</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						onclick="location.href='./search'">나만의 전기차</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						onclick="location.href='./recomInfo'">추천 정보</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						onclick="location.href='./app'">추천 어플</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						onclick="location.href='./charger'">내 주변 충전소</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Masthead-->
 	<section class="header-section bg-black">
 		<div class="container">
 			<div>
@@ -53,22 +68,22 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="condition-section bg-black">
 		<div class="container">
 			<div class="row">
 				<div align="right" class="btn-group">
 					<a id="writeReview" class="btn btn-primary js-scroll-trigger"
-						style="border-radius: 1.5rem; padding: 15px;"
-						>글 작성하기</a>
+						style="border-radius: 1.5rem; padding: 15px;">글 작성하기</a>
 				</div>
 			</div>
 		</div>
 	</section>
-		
+
 	<!-- Contact-->
 	<form>
-		<section class="condition-section bg-black" id = "writeRecomInfo" style = "display: none">
+		<section class="condition-section bg-black" id="writeRecomInfo"
+			style="display: none">
 			<div class="container">
 				<div class="card w-100" style="border-radius: 2rem;">
 					<div class="row">
@@ -117,17 +132,17 @@
 							<div class="card-body"
 								style="text-align: right; padding: 0.5rem 1rem;">
 								<div align="right" class="btn-group">
-									<button id="findCharger" class="btn btn-primary js-scroll-trigger"
+									<button id="findCharger"
+										class="btn btn-primary js-scroll-trigger"
 										style="border-radius: 1.5rem; padding: 15px;"
 										onclick="writeReview()">글 등록하기</button>
-										
+
 								</div>
 								<div align="right" class="btn-group">
 									<a id="cancleReview" class="btn btn-primary js-scroll-trigger"
-										style="border-radius: 1.5rem; padding: 15px;"
-									>취소하기</a>
-										
-								</div>								
+										style="border-radius: 1.5rem; padding: 15px;">취소하기</a>
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -135,11 +150,19 @@
 			</div>
 		</section>
 	</form>
-	
+
 	<div id="recomInfoResult">
 		<%@ include file="./ajaxContent/recomInfoContent.jsp"%>
-	</div>     
-
+	</div>
+	<div class="condition-section bg-black text-right">
+		<div class="container text-right">
+				<div align="right" class="btn-group text-right">
+					<a  
+						href="./Admin">&gt; 관리자 모드</a>
+						
+			</div>
+		</div>
+	</div>
 	<footer class="footer bg-black small text-center text-white-50">
 		<div class="container">
 
