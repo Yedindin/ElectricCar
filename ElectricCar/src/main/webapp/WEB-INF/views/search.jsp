@@ -21,8 +21,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   		<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 		<script type="text/javascript">
+		
 		  Kakao.init('e643fe2525cb01a52b0248e47331a218'); // 초기화
 		
 		  function sendLink() { // 카카오톡 공유하기
@@ -57,7 +59,7 @@
 			}
 		//이미지(png)로 다운로드
 		  function PrintDiv(div){
-		  	div = div[0]
+		  	div = div
 		  	html2canvas(div).then(function(canvas){
 		  		var myImage = canvas.toDataURL();
 		  		downloadURI(myImage, "나만의전기차.png") 
