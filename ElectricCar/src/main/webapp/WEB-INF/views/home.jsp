@@ -62,13 +62,15 @@
 				<div class="col-md-6 mb-3 mb-md-0" style="margin-top: 15rem">
 <!-- 					<h2 class="text-white mb-4">Pick Car Chu~&hearts; is...</h2>
  -->					
-						<h2 class="mb-4" style="color: #a2a2a2;">Pick Car is...</h2>
- 						<h6 class="mb-4" style="color: #a2a2a2;">This application aims to promote
+						<h2 class="mb-4" style="color: #a2a2a2;"><b>Pick Car는,</b></h2>
+ 						<h5 class="mb-4" style="color: #a2a2a2;"><!-- This application aims to promote
 						electric vehicle purchases by integrating and providing vast and
 						scattered information in a situation where the demand and supply
 						of electric vehicles increases, and recommending electric vehicles
-						that satisfy all the conditions desired by the user in particular.
-					</h6>
+						that satisfy all the conditions desired by the user in particular. -->
+						사용자 맞춤형 전기차를 추천해주는 서비스를 제공합니다. <br>
+						내가 원하는 조건을 충촉하는 전기차를 찾아보세요.
+					</h5>
 				</div>
 			</div>
 			<div class = "row" style = "justify-content: flex-end;">

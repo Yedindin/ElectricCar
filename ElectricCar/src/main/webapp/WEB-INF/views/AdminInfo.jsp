@@ -82,8 +82,8 @@
 										<h5 class="text-uppercase m-4">정보문</h5>
 										<hr class="my-4" />
 										<div class="medium text-black-50">
-											한동대학교 16학번 <br>전산전자공학부 <br> 토레이 RC<br>
-											1997.10.21<br> 혈액형 A형 <br>
+											한동대학교 16학번 <br>전산전자공학부 <br>Arise LAB <br> 토레이 RC<br>
+											1997.10.21<br> 
 											<br> <a href="https://github.com/neobomoon"
 												target="_blank">GitHub 방문하기 &gt;</a>
 										</div>
@@ -99,8 +99,8 @@
 										<h5 class="text-uppercase m-4">홍승훈</h5>
 										<hr class="my-4" />
 										<div class="medium text-black-50">
-											한동대학교 16학번 <br>전산전자공학부 <br> 카이퍼 RC<br>
-											1997.03.03<br> 혈액형 A형 <br>
+											한동대학교 16학번  <br>전산전자공학부 <br>MCNL<br> 카이퍼 RC<br>
+											1997.03.03<br> 
 											<br> <a href="https://github.com/Hunia777"
 												target="_blank">GitHub 방문하기 &gt;</a>
 										</div>
@@ -117,8 +117,8 @@
 										<h5 class="text-uppercase m-4">김예진</h5>
 										<hr class="my-4" />
 										<div class="medium text-black-50">
-											한동대학교 19학번 <br> 전산전자공학부 <br>손양원 RC<br>
-											2000.04.13<br>혈액형 B형 <br> <br> <a
+											한동대학교 19학번 <br> 전산전자공학부 <br>자존감 LAB <br>손양원 RC<br>
+											2000.04.13<br> <br> <a
 												href="https://github.com/Yedindin" target="_blank">GitHub
 												방문하기 &gt;</a>
 										</div>
@@ -133,8 +133,8 @@
 										<h5 class="text-uppercase m-4">양지후</h5>
 										<hr class="my-4" />
 										<div class="medium text-black-50">
-											한동대학교 19학번 <br>전산전자공학부 <br> 장기려 RC <br>
-											1999.04.29<br> 혈액형 A형<br>
+											한동대학교 19학번 <br>전산전자공학부 <br> WALAB<br>장기려 RC <br>
+											1999.04.29<br> 
 											<br> <a href="https://github.com/JihuYang"
 												target="_blank">GitHub 방문하기 &gt;</a>
 										</div>
