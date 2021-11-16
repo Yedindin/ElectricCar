@@ -74,7 +74,7 @@
 								style="display: flex; flex-direction: column; justify-content: space-around">
 								<div class="btn-group">
 									<button class="btn btn-secondary btn-lg \"
-										style="background-color: rgba(0, 0, 0, 0.5) !important; color:white !important;"
+										style="background-color: rgba(0, 0, 0, 0.5) !important; color: white !important;"
 										type="button" data-toggle="dropdown" aria-haspopup="true"
 										aria-expanded="false"
 										onclick="location.href = '${result.homepage_url}'"
@@ -119,8 +119,10 @@
 												<td>${result.power_kw}kw</td>
 											</tr>
 											<tr>
-												<td>최대 보조금</td>
-												<td>${result.amount}만원</td>
+												<td>보조금 지원 범위</td>
+												<td>${result.calculated_max}만원 </td>
+												<td>~</td>
+												<td>${result.calculated_min}만원</td>
 											</tr>
 										</tbody>
 									</table>

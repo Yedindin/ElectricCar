@@ -18,6 +18,8 @@ public class SearchDTO {
 	String brand_second;
 	int maxprice;
 	int minprice;
+	float calculated_min;
+	float calculated_max;
 	String subsidy_yn;
 	int input_sigoongoo_id;
 	String homepage_url;
@@ -108,6 +110,18 @@ public class SearchDTO {
 	public void setMinprice(int minprice) {
 		this.minprice = minprice;
 	}
+	public float getCalculated_min() {
+		return calculated_min;
+	}
+	public void setCalculated_min(float calculated_min) {
+		this.calculated_min = calculated_min;
+	}
+	public float getCalculated_max() {
+		return calculated_max;
+	}
+	public void setCalculated_max(float calculated_max) {
+		this.calculated_max = calculated_max;
+	}
 	public String getSubsidy_yn() {
 		return subsidy_yn;
 	}
@@ -150,6 +164,7 @@ public class SearchDTO {
 	public void setBrand_name(String brand_name) {
 		this.brand_name = brand_name;
 	}	
+	
 	@Override
 	public String toString() {
 		return "SearchDTO [picture=" + picture + ", car_name=" + car_name + ", model_name=" + model_name + ", price="
@@ -157,8 +172,9 @@ public class SearchDTO {
 				+ car_type + ", km_kwh=" + km_kwh + ", power_kw=" + power_kw + ", amount=" + amount
 				+ ", brand_first_id=" + brand_first_id + ", brand_second_id=" + brand_second_id + ", brand_first="
 				+ brand_first + ", brand_second=" + brand_second + ", maxprice=" + maxprice + ", minprice=" + minprice
-				+ ", subsidy_yn=" + subsidy_yn + ", input_sigoongoo_id=" + input_sigoongoo_id + ", homepage_url="
-				+ homepage_url + ", AS_number=" + AS_number + ", brand_name=" + brand_name + "]";
+				+ ", calculated_min=" + calculated_min + ", calculated_max=" + calculated_max + ", subsidy_yn="
+				+ subsidy_yn + ", input_sigoongoo_id=" + input_sigoongoo_id + ", homepage_url=" + homepage_url
+				+ ", AS_number=" + AS_number + ", brand_name=" + brand_name + "]";
 	}
-	
+
 }

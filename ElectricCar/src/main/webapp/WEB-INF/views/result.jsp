@@ -58,7 +58,7 @@
         <!-- Footer-->
        <footer class="footer bg-black small text-center text-white-50">
        <div class="container">
-      	 Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후
+      	 Copyright &copy; Pick Car Chu ~ &hearts; <br>정보문 홍승훈 김예진 양지후
        </div>
        </footer>
        <!-- Bootstrap core JS-->

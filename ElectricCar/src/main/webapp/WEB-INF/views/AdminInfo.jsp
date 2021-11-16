@@ -94,7 +94,7 @@
 							<div class="col-md-6 mb-6 mb-md-1 ">
 								<div class="card py-6 h-100" style="border-radius: 3.25rem;">
 									<div class="card-body text-center" style="padding: 2rem;">
-										<img src="./resources/assets/img/seunghoon.jpeg"
+										<img src="./resources/assets/img/seunghoon.jpg"
 											style="border-radius: 70%; overflow: hidden; width: 200px; height: 200px; object-fit: cover; border: 1px solid #65a09d;">
 										<h5 class="text-uppercase m-4">홍승훈</h5>
 										<hr class="my-4" />
@@ -153,8 +153,7 @@
 	<!-- Footer-->
 	<footer class="footer bg-black small text-center text-white-50">
 		<div class="container">
-			Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term
-			Project <br>정보문 홍승훈 김예진 양지후
+      	 Copyright &copy; Pick Car Chu ~ &hearts; <br>정보문 홍승훈 김예진 양지후
 		</div>
 	</footer>
 	<!-- Bootstrap core JS-->

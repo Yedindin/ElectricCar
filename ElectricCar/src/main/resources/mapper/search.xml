@@ -9,9 +9,9 @@
 		WITH NeedSub AS (
 		SELECT picture, car_name, model_name, price, zero_to_hundred, max_mileage,
 		car_type, km_kwh, power_kw, homepage_url, brand_name,
-   		<![CDATA[ IF(price < 9000, min, 0) AS min]]>,
-   		<![CDATA[ IF(price < 9000, max, 0) AS max]]>,
-		govern_subsidy
+   		<![CDATA[ IF(price < 9000, min, 0) AS minprice]]>,
+   		<![CDATA[ IF(price < 9000, max, 0) AS maxprice]]>,
+		govern_subsidy as amount
 		FROM charger_view, Subsidy
 		WHERE (brand_id = #{brand_first_id} OR brand_id = #{brand_second_id})
 		AND price BETWEEN #{minprice} AND #{maxprice}

@@ -58,15 +58,27 @@ public class SearchController {
 			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id) {
 		
 		List<SearchDTO> result = searchService.readSearch(brand_first_id, brand_second_id, carType, maxprice, minprice, subsidy_yn, input_sigoongoo_id);
+		for(int i=0; i<result.size(); i++) {
+			int max = result.get(i).getMaxprice();
+			int min = result.get(i).getMinprice();
+			int govern = result.get(i).getAmount();
+			float calculated_min = ((float)(govern) / 800) * min + govern;
+			float calculated_max = ((float)(govern) / 800) * max + govern;
+//			System.out.println(calculated_min);
+//			System.out.println(calculated_max);
+
+			result.get(i).setCalculated_min(calculated_min);
+			result.get(i).setCalculated_max(calculated_max);
+		}
 		mv.addObject("result", result);
 
-		System.out.println("brand_first: " + brand_first_id);
-		System.out.println("brand_second: " + brand_second_id);
-		System.out.println("carType: " + carType);		
-		System.out.println("maxprice: " + maxprice);
-		System.out.println("minprice: " + minprice);
-		System.out.println("subsidy_yn: " + subsidy_yn);
-		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
+//		System.out.println("brand_first: " + brand_first_id);
+//		System.out.println("brand_second: " + brand_second_id);
+//		System.out.println("carType: " + carType);		
+//		System.out.println("maxprice: " + maxprice);
+//		System.out.println("minprice: " + minprice);
+//		System.out.println("subsidy_yn: " + subsidy_yn);
+//		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
 		System.out.println(mv);
 		
 		if(result.isEmpty()) { //리스트에 값이 존재하지 않을 경우 출력

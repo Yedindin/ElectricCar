@@ -32,13 +32,17 @@ public class ResultController {
 			@RequestParam(value = "brand", defaultValue = "") String brand,
 			@RequestParam(value = "price", defaultValue = "") int price,
 			@RequestParam(value = "subsidy_yn", defaultValue = "") String subsidy_yn,
-			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id) {
+			@RequestParam(value = "input_sigoongoo_id", defaultValue = "") int input_sigoongoo_id,
+			@RequestParam(value = "amount", defaultValue = "") int amount
+			) {
 		//mv.addObject("result", searchService.readSearch());
-		System.out.println(mv);
-		System.out.println("brand: " + brand);
-		System.out.println("price: " + price);
-		System.out.println("subsidy_yn: " + subsidy_yn);
-		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
+//		System.out.println(mv);
+//		System.out.println("brand: " + brand);
+//		System.out.println("price: " + price);
+//		System.out.println("subsidy_yn: " + subsidy_yn);
+//		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);
+//		System.out.println("amount: " + amount);
+
 
 		mv.setViewName("ajaxContent/resultContent");
 		return mv;

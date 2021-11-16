@@ -221,9 +221,7 @@
                              <div class="card-body text-center">
                             	<i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 btn-title">거주 지역</h4>
-	                    	<div class="btn-group col-12">
-		             	<div style = "display: flex; ">
-							<div class="input-group mb-3 ">
+	                    	<div class="btn-group col-9">
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
 							  </div>
@@ -233,11 +231,9 @@
 								<option value="${address.special_do_id}">${address.special_do_name}</option>
 							  </c:forEach>								
 							  </select>
-							</div>
 <%-- 							<div class="col-6" id="sigoongoo">
 								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
 							</div> --%>
-							</div>
 						</div>
 						</div> 
 							
@@ -262,7 +258,7 @@
         <!-- Footer-->
        <footer class="footer bg-black small text-center text-white-50">
        <div class="container">
-      	 Copyright &copy; Pick Car Chu ~ &hearts; 2021-1 Database System Term Project <br>정보문 홍승훈 김예진 양지후
+      	 Copyright &copy; Pick Car Chu ~ &hearts; <br>정보문 홍승훈 김예진 양지후
        </div>
        </footer>
         <!-- Bootstrap core JS-->
