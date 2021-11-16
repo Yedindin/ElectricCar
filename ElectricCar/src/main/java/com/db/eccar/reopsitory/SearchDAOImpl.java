@@ -28,7 +28,7 @@ public class SearchDAOImpl implements SearchDAO{
 		param.put("maxprice", maxprice);
 		param.put("minprice", minprice);
 		param.put("subsidy_yn", subsidy_yn);
-		param.put("input_sigoongoo_id", input_sigoongoo_id);
+		param.put("special_do_id", input_sigoongoo_id);
 		param.put("car_type", carType);
 		System.out.println("result in DAO");
 		System.out.println("brand_first_id: " + brand_first_id);
@@ -37,7 +37,7 @@ public class SearchDAOImpl implements SearchDAO{
 		System.out.println("maxprice: " + maxprice);
 		System.out.println("minprice: " + minprice);
 		System.out.println("subsidy_yn: " + subsidy_yn);
-		System.out.println("input_sigoongoo_id: " + input_sigoongoo_id);		
+		System.out.println("special_do_id: " + input_sigoongoo_id);		
 
 		List<SearchDTO> searchInfolist = sqlSession.selectList("Search.readSearch", param);
 		System.out.println("result in DAO: " + searchInfolist);

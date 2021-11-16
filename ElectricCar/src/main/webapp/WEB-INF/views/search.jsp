@@ -227,16 +227,16 @@
 							  <div class="input-group-prepend">
 							    <label class="input-group-text" for="inputGroupSelect01">도/광역시</label>
 							  </div>
-							  <select class="custom-select" id = "input_special_do_id" onchange = "findSigoongoo_id_test()">
+							  <select class="custom-select" id = "special_do_id">
 							    <option selected>Choose...</option>
 							  <c:forEach items="${address}" var="address">							    
 								<option value="${address.special_do_id}">${address.special_do_name}</option>
 							  </c:forEach>								
 							  </select>
 							</div>
-							<div class="col-6" id="sigoongoo">
+<%-- 							<div class="col-6" id="sigoongoo">
 								<%@ include file="./ajaxContent/sigoongooContent.jsp"%> 
-							</div>
+							</div> --%>
 							</div>
 						</div>
 						</div> 

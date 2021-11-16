@@ -143,7 +143,7 @@ function findResult_id() {
 	var minprice = document.getElementById("minprice").value;
 	var maxprice = document.getElementById("maxprice").value;
 	var subsidy_yn = document.getElementById("subsidy_yn").value;
-	var input_sigoongoo_id = document.getElementById("input_sigoongoo_id").value;
+	var input_sigoongoo_id = document.getElementById("special_do_id").value;
 
 	$.ajax({
 		url: "./search/result",
